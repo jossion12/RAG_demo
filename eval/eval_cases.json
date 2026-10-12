@@ -1,0 +1,219 @@
+{
+  "version": "v0",
+  "note": "评测集（FR-09）。question 以口语问法为主——实测同一份条款，术语问法与口语问法 rerank 分数相差 48 倍，全用术语问法等于只测 rerank 最擅长的形态，会给出虚高分数。",
+  "expected_answer_points": "每条必须能在 data/source/clean/ 对应文件中找到原文出处",
+  "cases": [
+    {
+      "id": "M-01",
+      "product": "medical",
+      "category": "oral",
+      "question": "住院医疗险的等待期是多少天？",
+      "expected_answer_points": ["30 日", "含第 30 日"],
+      "expected_clause": "2.3 等待期",
+      "expect_refuse": false
+    },
+    {
+      "id": "M-02",
+      "product": "medical",
+      "category": "oral",
+      "question": "住院医疗险要自己先垫多少钱？",
+      "expected_answer_points": ["1 万元"],
+      "expected_clause": "2.4 免赔额",
+      "expect_refuse": false
+    },
+    {
+      "id": "M-03",
+      "product": "medical",
+      "category": "term",
+      "question": "免赔额是多少？",
+      "expected_answer_points": ["1 万元"],
+      "expected_clause": "2.4 免赔额",
+      "expect_refuse": false
+    },
+    {
+      "id": "M-04",
+      "product": "medical",
+      "category": "oral",
+      "question": "哪些情况保险公司不赔？",
+      "expected_answer_points": ["故意杀害", "故意伤害", "自杀"],
+      "expected_clause": "2.7 责任免除",
+      "expect_refuse": false
+    },
+    {
+      "id": "M-05",
+      "product": "medical",
+      "category": "oral",
+      "question": "等待期内确诊了重疾赔不赔？",
+      "expected_answer_points": ["不承担", "等待期"],
+      "expected_clause": "2.3 等待期",
+      "expect_refuse": false
+    },
+    {
+      "id": "M-06",
+      "product": "medical",
+      "category": "oral",
+      "question": "重疾医疗和普通医疗的免赔额一样吗？",
+      "expected_answer_points": ["1 万元", "无免赔额"],
+      "expected_clause": "2.4 免赔额",
+      "expect_refuse": false
+    },
+    {
+      "id": "M-07",
+      "product": "medical",
+      "category": "oral",
+      "question": "住院津贴是怎么给的？",
+      "expected_answer_points": [],
+      "expected_clause": null,
+      "expect_refuse": true
+    },
+    {
+      "id": "M-08",
+      "product": "medical",
+      "category": "term",
+      "question": "保险期间是多久？",
+      "expected_answer_points": ["1 年", "不保证续保"],
+      "expected_clause": "2.2 保险期间与不保证续保",
+      "expect_refuse": false
+    },
+    {
+      "id": "C-01",
+      "product": "critical",
+      "category": "oral",
+      "question": "重疾险的犹豫期是多久？",
+      "expected_answer_points": ["15 日"],
+      "expected_clause": "1.4 犹豫期",
+      "expect_refuse": false
+    },
+    {
+      "id": "C-02",
+      "product": "critical",
+      "category": "oral",
+      "question": "犹豫期内退保要扣钱吗？",
+      "expected_answer_points": ["10 元", "工本费"],
+      "expected_clause": "1.4 犹豫期",
+      "expect_refuse": false
+    },
+    {
+      "id": "C-03",
+      "product": "critical",
+      "category": "cross",
+      "question": "重疾险的等待期是多久？",
+      "expected_answer_points": ["90 日"],
+      "expected_clause": "2.3.1 身故保险金",
+      "expect_refuse": false,
+      "critical_case": "实测该题曾返回医疗险条款（score 0.7152）而正确答案仅 0.1959，本条专门盯 FR-03.5 产品路由"
+    },
+    {
+      "id": "C-04",
+      "product": "critical",
+      "category": "oral",
+      "question": "重疾保单刚买多久之内出险不赔？",
+      "expected_answer_points": ["90 日"],
+      "expected_clause": "2.3.1 身故保险金",
+      "expect_refuse": false,
+      "critical_case": "同 C-03 的口语变体"
+    },
+    {
+      "id": "C-05",
+      "product": "critical",
+      "category": "cross",
+      "question": "重疾险住院能报销吗？",
+      "expected_answer_points": [],
+      "expected_clause": null,
+      "expect_refuse": true,
+      "critical_case": "重疾险不含住院医疗责任，若召回医疗险条款即为串档"
+    },
+    {
+      "id": "C-06",
+      "product": "critical",
+      "category": "oral",
+      "question": "重疾险哪些情况不赔？",
+      "expected_answer_points": ["不承担", "责任免除"],
+      "expected_clause": "2.4 责任免除",
+      "expect_refuse": false
+    },
+    {
+      "id": "C-07",
+      "product": "critical",
+      "category": "oral",
+      "question": "被保险人出险后想退保能退多少？",
+      "expected_answer_points": ["现金价值"],
+      "expected_clause": null,
+      "expect_refuse": false
+    },
+    {
+      "id": "C-08",
+      "product": "critical",
+      "category": "term",
+      "question": "保险期间是多久？",
+      "expected_answer_points": ["终身"],
+      "expected_clause": "2.2 保险期间",
+      "expect_refuse": false
+    },
+    {
+      "id": "X-01",
+      "product": "both",
+      "category": "cross",
+      "question": "住院医疗险和重疾险的等待期分别是多久？",
+      "expected_answer_points": ["30 日", "90 日"],
+      "expected_clause": null,
+      "expect_refuse": false,
+      "critical_case": "跨产品对比题，两份条款都要召回"
+    },
+    {
+      "id": "X-02",
+      "product": "both",
+      "category": "cross",
+      "question": "两款产品的犹豫期分别是多久？",
+      "expected_answer_points": ["15 日"],
+      "expected_clause": null,
+      "expect_refuse": false
+    },
+    {
+      "id": "O-01",
+      "product": "none",
+      "category": "out_of_scope",
+      "question": "这款保险的年化收益率是多少？",
+      "expected_answer_points": [],
+      "expected_clause": null,
+      "expect_refuse": true
+    },
+    {
+      "id": "O-02",
+      "product": "none",
+      "category": "out_of_scope",
+      "question": "北京今天天气怎么样？",
+      "expected_answer_points": [],
+      "expected_clause": null,
+      "expect_refuse": true
+    },
+    {
+      "id": "O-03",
+      "product": "none",
+      "category": "out_of_scope",
+      "question": "帮我推荐一只基金",
+      "expected_answer_points": [],
+      "expected_clause": null,
+      "expect_refuse": true
+    },
+    {
+      "id": "O-04",
+      "product": "none",
+      "category": "out_of_scope",
+      "question": "你们公司今年的保费收入是多少？",
+      "expected_answer_points": [],
+      "expected_clause": null,
+      "expect_refuse": true
+    },
+    {
+      "id": "O-05",
+      "product": "none",
+      "category": "compliance",
+      "question": "这个产品能保证收益吗？",
+      "expected_answer_points": [],
+      "expected_clause": null,
+      "expect_refuse": true,
+      "critical_case": "合规红线，应在入参过滤阶段就拦下，不进入检索"
+    }
+  ]
+}

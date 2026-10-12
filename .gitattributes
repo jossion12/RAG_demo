@@ -1,0 +1,34 @@
+# ============================================================================
+# 行尾与二进制声明
+#
+# 为什么要放这个文件：本机 core.autocrlf=true 来自 Git 安装目录的系统级配置
+# （D:/Program Files (x86)/Git/etc/gitconfig），不是仓库内的设置。若不显式声明，
+# 同一份代码换台机器检出就会整仓变成 CRLF，产生全量行尾抖动。
+# ============================================================================
+
+# 文本一律以 LF 入库、LF 检出；是否真的按文本处理交给 git 自动判定。
+*               text=auto eol=lf
+
+# ---------- Windows 脚本保持 CRLF ----------
+# start-backend.ps1 等脚本由 Windows PowerShell 5.1 执行，行尾维持 CRLF 更稳妥。
+# 注意：这些脚本必须是 UTF-8 带 BOM（见 README「启动脚本踩过的坑」），
+#       BOM 只是普通字节，git 原样保留，此处不需额外声明。
+*.ps1           text eol=crlf
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+
+# ---------- 二进制：禁止行尾转换与 diff ----------
+# data/source/ 下是条款 PDF 原件，必须原样入库。
+*.pdf           binary
+*.jar           binary
+*.zip           binary
+*.gz            binary
+*.7z            binary
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.ico           binary
+*.woff          binary
+*.woff2         binary
+*.ttf           binary

@@ -1,0 +1,67 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: insurance-rag-backend
+
+  # 开发期用 H2（PostgreSQL 兼容模式），无需起数据库容器即可跑通；
+  # 生产切 PG 只需改 url/驱动/账号，见 application-prod.yml。
+  #
+  # data 目录用 ${app.data.dir:./data} 占位：默认相对路径适合在项目目录下直接
+  # `java -jar` 启动；而通过 WMI/CIM 拉起的后台进程工作目录是 C:\Windows\System32，
+  # 必须用 -Dapp.data.dir=<绝对路径> 覆盖，否则 H2 会去 System32 建库并因权限崩溃。
+  datasource:
+    url: jdbc:h2:file:${app.data.dir:./data}/insurance-rag;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # SSE 场景：不要让 MVC 层缓冲
+  mvc:
+    async:
+      request-timeout: 180000
+
+dify:
+  # Dify 走 nginx 的 80 端口；同机部署时容器外可直接用 localhost
+  base-url: http://localhost
+  # 应用 API Key（app- 开头）。用环境变量注入，不入库。
+  app-api-key: ${DIFY_APP_API_KEY:}
+  end-user: demo-user
+  read-timeout-ms: 180000
+  dataset-api-keys:
+    critical: ${DIFY_DATASET_KEY_CRITICAL:}
+    medical: ${DIFY_DATASET_KEY_MEDICAL:}
+
+logging:
+  # 日志由 Spring 自己写文件，路径跟随 app.data.dir。
+  # 这样启动脚本就不必用 -RedirectStandard*（那会让 java 继承 PowerShell 的
+  # 管道句柄，导致脚本退不出来），后台拉起时也能查到日志。
+  file:
+    name: ${app.data.dir:./data}/../backend.log
+  # 不显式指定的话，logback 用 JVM 平台默认字符集写文件——本机 zh-CN 出来就是
+  # GBK，UTF-8 工具（PowerShell 的 Get-Content、编辑器、大部分日志采集器）读出来
+  # 中文全是 '?'。application.yml 全文是 UTF-8，日志也就该是 UTF-8。
+  charset:
+    file: UTF-8
+    console: UTF-8
+  level:
+    com.insurance.rag: INFO
+    org.springframework.web.reactive: WARN

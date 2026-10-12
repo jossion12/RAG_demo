@@ -1,0 +1,73 @@
+# ============================================================================
+# 保险条款智能问答助手（RAG_demo）— Git 忽略规则
+#
+# 说明：data/source/ 下的 PDF 与清洗后文本**属于项目内容**（Dify 入库的数据源），
+#      故不忽略；本文件只排除构建产物、运行时数据、本地密钥与临时工作区。
+# ============================================================================
+
+# ---------- Java / Maven ----------
+backend/target/
+target/
+*.class
+*.jar
+*.war
+.mvn/timing.properties
+
+# ---------- Node / Vite ----------
+node_modules/
+frontend/dist/
+dist/
+*.tsbuildinfo
+
+# ---------- 运行时数据：H2 文件库 ----------
+# 开发期落盘在 data/ 与 backend/data/ 两处，schema 由 JPA ddl-auto:update 生成，
+# 属本地状态而非源码，切勿入库。
+*.mv.db
+*.lock.db
+*.trace.db
+*.h2.db
+
+# ---------- 日志与运行时标记 ----------
+*.log
+logs/
+*.pid
+backend/backend.pid
+
+# ---------- 本地密钥 ----------
+# Dify 的 app-api-key / dataset key 一律用环境变量注入（见 README「运行」一节），
+# application.yml 里只留 ${DIFY_APP_API_KEY:} 之类的占位符。
+.env
+.env.*
+!.env.example
+
+# ---------- 临时工作区 ----------
+# PDF 解析中间产物（page*.html）与一次性探针脚本，不属于交付内容。
+docs/_work/
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# ---------- Python（eval/ 与 scripts/） ----------
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# ---------- 操作系统 ----------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "query": "住院医疗保险的等待期是多久？",
+      "label": "医疗险_等待期",
+      "expect": "HIGH",
+      "score": 0.7008
+    },
+    {
+      "query": "免赔额是多少？",
+      "label": "医疗险_免赔额",
+      "expect": "HIGH",
+      "score": 0.5593
+    },
+    {
+      "query": "重疾险等待期是多久？",
+      "label": "重疾险_等待期",
+      "expect": "HIGH",
+      "score": 0.3557
+    },
+    {
+      "query": "重疾险犹豫期多久，退保退多少？",
+      "label": "重疾险_犹豫期",
+      "expect": "HIGH",
+      "score": 0.1207
+    },
+    {
+      "query": "哪些情况不赔？",
+      "label": "医疗险_责任免除",
+      "expect": "HIGH",
+      "score": 0.0804
+    },
+    {
+      "query": "哪些情况不赔？",
+      "label": "重疾险_责任免除",
+      "expect": "HIGH",
+      "score": 0.5268
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "医疗险_等待期",
+      "expect": "NONE",
+      "score": 0.0007
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "医疗险_免赔额",
+      "expect": "NONE",
+      "score": 0.004
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "医疗险_责任免除",
+      "expect": "NONE",
+      "score": 0.001
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "重疾险_等待期",
+      "expect": "NONE",
+      "score": 0.0026
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "重疾险_犹豫期",
+      "expect": "NONE",
+      "score": 0.0051
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "重疾险_责任免除",
+      "expect": "NONE",
+      "score": 0.0016
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "医疗险_等待期",
+      "expect": "NONE",
+      "score": 0.0
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "医疗险_免赔额",
+      "expect": "NONE",
+      "score": 0.0
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "医疗险_责任免除",
+      "expect": "NONE",
+      "score": 0.0
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "重疾险_等待期",
+      "expect": "NONE",
+      "score": 0.0
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "重疾险_犹豫期",
+      "expect": "NONE",
+      "score": 0.0
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "重疾险_责任免除",
+      "expect": "NONE",
+      "score": 0.0
+    }
+  ],
+  "high_min": 0.0804,
+  "none_max": 0.0051
+}

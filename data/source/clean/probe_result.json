@@ -1,0 +1,473 @@
+{
+  "clean_report": {
+    "太保互联网个人一年期住院医疗保险条款.pdf": {
+      "dropped_line_numbers": 112,
+      "dropped_noise_lines": 5,
+      "chars_before": 38793,
+      "chars_after": 38491,
+      "cjk_ratio": 0.7991
+    },
+    "太保团体百万医疗保险互联网版条款.pdf": {
+      "dropped_line_numbers": 100,
+      "dropped_noise_lines": 5,
+      "chars_before": 47955,
+      "chars_after": 47680,
+      "cjk_ratio": 0.8095
+    },
+    "太保团体终身重大疾病保险E款条款.pdf": {
+      "dropped_line_numbers": 8,
+      "dropped_noise_lines": 4,
+      "chars_before": 50806,
+      "chars_after": 50739,
+      "cjk_ratio": 0.7995
+    }
+  },
+  "rows": [
+    {
+      "query": "住院医疗保险的等待期是多少天？",
+      "style": "术语",
+      "label": "med_等待期",
+      "expect": "HIGH",
+      "score": 0.8029,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗保险的等待期是多少天？",
+      "style": "术语",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.1073,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗保险的等待期是多少天？",
+      "style": "术语",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0396,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗保险的等待期是多少天？",
+      "style": "术语",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.0021,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗保险的等待期是多少天？",
+      "style": "术语",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0015,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗保险的等待期是多少天？",
+      "style": "术语",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0008,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗险要自己先垫多少钱？",
+      "style": "口语",
+      "label": "med_免赔额",
+      "expect": "HIGH",
+      "score": 0.0156,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗险要自己先垫多少钱？",
+      "style": "口语",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.0122,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗险要自己先垫多少钱？",
+      "style": "口语",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.0092,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗险要自己先垫多少钱？",
+      "style": "口语",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.0036,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗险要自己先垫多少钱？",
+      "style": "口语",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0019,
+      "top1_correct": true
+    },
+    {
+      "query": "住院医疗险要自己先垫多少钱？",
+      "style": "口语",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0009,
+      "top1_correct": true
+    },
+    {
+      "query": "免赔额是多少？",
+      "style": "术语",
+      "label": "med_免赔额",
+      "expect": "HIGH",
+      "score": 0.7567,
+      "top1_correct": true
+    },
+    {
+      "query": "免赔额是多少？",
+      "style": "术语",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.5643,
+      "top1_correct": true
+    },
+    {
+      "query": "免赔额是多少？",
+      "style": "术语",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.068,
+      "top1_correct": true
+    },
+    {
+      "query": "免赔额是多少？",
+      "style": "术语",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0379,
+      "top1_correct": true
+    },
+    {
+      "query": "免赔额是多少？",
+      "style": "术语",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.0139,
+      "top1_correct": true
+    },
+    {
+      "query": "免赔额是多少？",
+      "style": "术语",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0051,
+      "top1_correct": true
+    },
+    {
+      "query": "重疾险的等待期是多久？",
+      "style": "术语",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.7152,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾险的等待期是多久？",
+      "style": "术语",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.2252,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾险的等待期是多久？",
+      "style": "术语",
+      "label": "cri_等待期",
+      "expect": "HIGH",
+      "score": 0.1959,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾险的等待期是多久？",
+      "style": "术语",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.0062,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾险的等待期是多久？",
+      "style": "术语",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0059,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾险的等待期是多久？",
+      "style": "术语",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0023,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾保单刚买多久之内出险不赔？",
+      "style": "口语",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.0612,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾保单刚买多久之内出险不赔？",
+      "style": "口语",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.05,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾保单刚买多久之内出险不赔？",
+      "style": "口语",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0223,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾保单刚买多久之内出险不赔？",
+      "style": "口语",
+      "label": "cri_等待期",
+      "expect": "HIGH",
+      "score": 0.0151,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾保单刚买多久之内出险不赔？",
+      "style": "口语",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.0151,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾保单刚买多久之内出险不赔？",
+      "style": "口语",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0141,
+      "top1_correct": false
+    },
+    {
+      "query": "重疾险犹豫期多久？退保扣钱吗？",
+      "style": "口语",
+      "label": "cri_犹豫期",
+      "expect": "HIGH",
+      "score": 0.826,
+      "top1_correct": true
+    },
+    {
+      "query": "重疾险犹豫期多久？退保扣钱吗？",
+      "style": "口语",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.1211,
+      "top1_correct": true
+    },
+    {
+      "query": "重疾险犹豫期多久？退保扣钱吗？",
+      "style": "口语",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.0133,
+      "top1_correct": true
+    },
+    {
+      "query": "重疾险犹豫期多久？退保扣钱吗？",
+      "style": "口语",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0132,
+      "top1_correct": true
+    },
+    {
+      "query": "重疾险犹豫期多久？退保扣钱吗？",
+      "style": "口语",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0088,
+      "top1_correct": true
+    },
+    {
+      "query": "重疾险犹豫期多久？退保扣钱吗？",
+      "style": "口语",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0056,
+      "top1_correct": true
+    },
+    {
+      "query": "哪些情况保险公司不赔？",
+      "style": "口语",
+      "label": "med_责任免除",
+      "expect": "HIGH",
+      "score": 0.8501,
+      "top1_correct": true
+    },
+    {
+      "query": "哪些情况保险公司不赔？",
+      "style": "口语",
+      "label": "cri_责任免除",
+      "expect": "HIGH",
+      "score": 0.282,
+      "top1_correct": true
+    },
+    {
+      "query": "哪些情况保险公司不赔？",
+      "style": "口语",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.1679,
+      "top1_correct": true
+    },
+    {
+      "query": "哪些情况保险公司不赔？",
+      "style": "口语",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0774,
+      "top1_correct": true
+    },
+    {
+      "query": "哪些情况保险公司不赔？",
+      "style": "口语",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0059,
+      "top1_correct": true
+    },
+    {
+      "query": "哪些情况保险公司不赔？",
+      "style": "口语",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.0053,
+      "top1_correct": true
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.007
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0031
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.0102
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.005
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0034
+    },
+    {
+      "query": "这款保险的年化收益率是多少？",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0043
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.0002
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.002
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.0
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0002
+    },
+    {
+      "query": "北京今天天气怎么样？",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0001
+    },
+    {
+      "query": "怎么申请理赔？需要带什么材料？",
+      "label": "med_等待期",
+      "expect": "NONE",
+      "score": 0.0249
+    },
+    {
+      "query": "怎么申请理赔？需要带什么材料？",
+      "label": "med_免赔额",
+      "expect": "NONE",
+      "score": 0.0146
+    },
+    {
+      "query": "怎么申请理赔？需要带什么材料？",
+      "label": "med_责任免除",
+      "expect": "NONE",
+      "score": 0.0663
+    },
+    {
+      "query": "怎么申请理赔？需要带什么材料？",
+      "label": "cri_犹豫期",
+      "expect": "NONE",
+      "score": 0.0176
+    },
+    {
+      "query": "怎么申请理赔？需要带什么材料？",
+      "label": "cri_责任免除",
+      "expect": "NONE",
+      "score": 0.0229
+    },
+    {
+      "query": "怎么申请理赔？需要带什么材料？",
+      "label": "cri_等待期",
+      "expect": "NONE",
+      "score": 0.0161
+    }
+  ],
+  "high_min": 0.0151,
+  "none_max": 0.7152
+}
