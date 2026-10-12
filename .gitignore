@@ -44,6 +44,29 @@ backend/backend.pid
 # PDF 解析中间产物（page*.html）与一次性探针脚本，不属于交付内容。
 docs/_work/
 
+# ---------- 代理 / 工具工作区 ----------
+# Agent 自己的会话记忆，不是项目内容，换机器/换人不该跟着走。
+.workbuddy/
+.workbuddy/**
+
+# ---------- 本地密钥（兜底） ----------
+# 检索参数扫描要用 Dify 的 dataset 级 API key，约定存在仓库外的
+# %USERPROFILE%\.dify_dataset_key，绝不能入库。这里再加一道兜底，
+# 防止有人图省事把它拷进仓库。
+*.dify_dataset_key
+*dify_dataset_key*
+.eval_secrets/
+
+# ---------- 评测运行产物 ----------
+# eval/runs/<tag>/ 是有意提交的：它既是调参证据，也是「判据改了可以不重发请求
+# 直接重判」（run_iteration.py --resume）的依据。一次全量评测 15 分钟，
+# 有了留档就不必重跑。
+#
+# 但冒烟测试那种一次性调试跑没有留档价值，忽略掉：
+eval/runs/smoke/
+# 提示词校验用的临时导出（改完确认用的中间物）
+eval/prompts/verify_*.txt
+
 # ---------- IDE ----------
 .vscode/
 .idea/

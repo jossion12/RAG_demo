@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "保险条款智能问答助手 — 整体架构",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "output": "docs/archify/architecture.html",
+    "views": [
+      {
+        "id": "main-path",
+        "label": "问答主链路",
+        "focus": ["users", "web", "gov", "dify", "weav"],
+        "note": "营销员提问经前端与 Java 治理层进入 Dify 检索，只有一条主路径。"
+      },
+      {
+        "id": "models",
+        "label": "模型与重排",
+        "focus": ["dify", "ollama", "tei", "weav"],
+        "note": "LLM 与 Embedding 由宿主机 Ollama 提供，Rerank 由 TEI 容器提供，向量落在 Weaviate。"
+      },
+      {
+        "id": "audit",
+        "label": "审计留痕",
+        "focus": ["gov", "audit"],
+        "note": "治理层在返回前把问答、引用、检索分数与掩码标签一起落库。"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "users",
+      "type": "external",
+      "label": "保险营销员",
+      "sublabel": "提问 · 看引用溯源",
+      "pos": [30, 320],
+      "size": [140, 68]
+    },
+    {
+      "id": "web",
+      "type": "frontend",
+      "label": "对话前端",
+      "sublabel": "React + Vite :5173",
+      "brand": "react",
+      "pos": [280, 320],
+      "size": [150, 68]
+    },
+    {
+      "id": "gov",
+      "type": "backend",
+      "label": "Java 治理层",
+      "sublabel": "Spring Boot 3.3 :8080",
+      "tag": "BFF · SSE 编排",
+      "pos": [560, 320],
+      "size": [150, 68]
+    },
+    {
+      "id": "dify",
+      "type": "cloud",
+      "label": "Dify Chatflow",
+      "sublabel": "v1.17.1 · /v1/chat-messages",
+      "pos": [865, 320],
+      "size": [160, 68]
+    },
+    {
+      "id": "ollama",
+      "type": "cloud",
+      "label": "Ollama",
+      "sublabel": "qwen3.5:9b + bge-m3",
+      "brand": "ollama",
+      "pos": [1105, 150],
+      "size": [170, 68]
+    },
+    {
+      "id": "weav",
+      "type": "database",
+      "label": "Weaviate 向量库",
+      "sublabel": "1.39.2 · 3902 条向量",
+      "pos": [1105, 330],
+      "size": [170, 68]
+    },
+    {
+      "id": "tei",
+      "type": "cloud",
+      "label": "TEI Rerank",
+      "sublabel": "bge-reranker-v2-m3",
+      "pos": [1105, 510],
+      "size": [170, 68]
+    },
+    {
+      "id": "audit",
+      "type": "database",
+      "label": "审计库",
+      "sublabel": "H2 文件库 / PostgreSQL",
+      "pos": [560, 500],
+      "size": [150, 68]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Dify 容器编排 · 15 个常驻容器 · nginx :80",
+      "wraps": ["dify", "weav"]
+    },
+    {
+      "kind": "region",
+      "label": "tei-rerank 容器 · 手工拉起",
+      "wraps": ["tei"]
+    }
+  ],
+  "connections": [
+    { "id": "ask", "from": "users", "to": "web", "label": "提问" },
+    { "id": "call-stream", "from": "web", "to": "gov", "label": "POST /api/chat/stream" },
+    {
+      "id": "forward-dify",
+      "from": "gov",
+      "to": "dify",
+      "label": "SSE 转发 /v1/chat-messages",
+      "variant": "emphasis"
+    },
+    {
+      "id": "audit-write",
+      "from": "gov",
+      "to": "audit",
+      "label": "审计落库",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 30
+    },
+    { "id": "retrieve", "from": "dify", "to": "weav", "label": "混合检索召回", "fromSide": "right", "labelDy": 45 },
+    { "id": "generate", "from": "dify", "to": "ollama", "label": "LLM 生成", "fromSide": "top" },
+    { "id": "rerank", "from": "dify", "to": "tei", "label": "Rerank 重排", "fromSide": "bottom" },
+    {
+      "id": "index-embed",
+      "from": "ollama",
+      "to": "weav",
+      "label": "索引期写入",
+      "variant": "dashed",
+      "labelDy": 40
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "职责分工",
+      "items": [
+        "RAG 链路由 Dify 编排；Java 侧只做治理：BFF、审计、过滤、引用组装、评测",
+        "治理层经 Dify service API 访问检索，不直连向量库"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "部署形态",
+      "items": [
+        "Dify 1.17.1 自托管 15 个常驻容器，向量库为 Weaviate 1.39.2（3902 条向量）",
+        "Ollama 跑宿主机 :11434，不进容器以避让单卡显存",
+        "tei-rerank 不在 compose 内，Docker 重启后需手工拉起"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "准入与留痕",
+      "items": [
+        "API Key 仅经环境变量注入，不入库",
+        "SSE 事件序列 delta → citations → done；出参命中合规红线时替换为拦截提示"
+      ]
+    }
+  ]
+}

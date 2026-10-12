@@ -1,0 +1,308 @@
+{
+  "version": "v2",
+  "note": "在 eval_cases.json(v0, 23条) 基础上扩展。每条新增用例的 expected_answer_points 都能在 data/source/clean/ 对应文件中找到原文出处；expected_clause 用「章节号 + 标题」以便区分同名章节（个人医疗的免赔额是 2.4，团体医疗是 2.5）。",
+  "design_rationale": [
+    "v0 只覆盖「医疗 vs 重疾」二分，实际库里是**三份文档**（个人住院医疗 / 团体百万医疗 / 重疾E），文档级串档在 v0 判不出来 —— v1 起引用里出现的是哪份文档参与判定（见 run_iteration.py 的 DOC_PRODUCT）。",
+    "补齐 v0 缺失的五类真实用户问法：无产品指代的歧义题、多意图复合题、错别字/无标点的鲁棒题、时效/价格类幻觉陷阱、合规与隐私过滤。",
+    "刻意加入若干**冷门但区分度高**的条款（宽限期 60 日、现金价值给付后降为 0、效力恢复 2 年、团体医疗必选责任），它们考的是召回而不是阈值，调参时能看清是哪一侧在起作用。"
+  ],
+  "cases": [
+    {
+      "id": "M-01", "product": "medical", "category": "oral", "origin": "v0",
+      "question": "住院医疗险的等待期是多少天？",
+      "expected_answer_points": ["30 日", "含第 30 日"], "expected_clause": "2.3 等待期", "expect_refuse": false
+    },
+    {
+      "id": "M-02", "product": "medical", "category": "oral", "origin": "v0",
+      "question": "住院医疗险要自己先垫多少钱？",
+      "expected_answer_points": ["1 万元"], "expected_clause": "2.4 免赔额", "expect_refuse": false
+    },
+    {
+      "id": "M-03", "product": "medical", "category": "term", "origin": "v0",
+      "question": "免赔额是多少？",
+      "expected_answer_points": ["1 万元"], "expected_clause": "2.4 免赔额", "expect_refuse": false
+    },
+    {
+      "id": "M-04", "product": "medical", "category": "oral", "origin": "v0",
+      "question": "哪些情况保险公司不赔？",
+      "expected_answer_points": ["故意杀害", "故意伤害", "自杀"], "expected_clause": "2.7 责任免除", "expect_refuse": false
+    },
+    {
+      "id": "M-05", "product": "medical", "category": "oral", "origin": "v0",
+      "question": "等待期内确诊了重疾赔不赔？",
+      "expected_answer_points": ["不承担", "等待期"], "expected_clause": "2.3 等待期", "expect_refuse": false
+    },
+    {
+      "id": "M-06", "product": "medical", "category": "oral", "origin": "v0",
+      "question": "重疾医疗和普通医疗的免赔额一样吗？",
+      "expected_answer_points": ["1 万元", "无免赔额"], "expected_clause": "2.4 免赔额", "expect_refuse": false
+    },
+    {
+      "id": "M-07", "product": "medical", "category": "oral", "origin": "v0",
+      "question": "住院津贴是怎么给的？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true,
+      "critical_case": "住院津贴不在任一份条款里，属库内未覆盖，应拒答而不是编"
+    },
+    {
+      "id": "M-08", "product": "medical", "category": "term", "origin": "v0",
+      "question": "保险期间是多久？",
+      "expected_answer_points": ["1 年", "不保证续保"], "expected_clause": "2.2 保险期间与不保证续保", "expect_refuse": false
+    },
+    {
+      "id": "C-01", "product": "critical", "category": "oral", "origin": "v0",
+      "question": "重疾险的犹豫期是多久？",
+      "expected_answer_points": ["15 日"], "expected_clause": "1.4 犹豫期", "expect_refuse": false
+    },
+    {
+      "id": "C-02", "product": "critical", "category": "oral", "origin": "v0",
+      "question": "犹豫期内退保要扣钱吗？",
+      "expected_answer_points": ["10 元", "工本费"], "expected_clause": "1.4 犹豫期", "expect_refuse": false
+    },
+    {
+      "id": "C-03", "product": "critical", "category": "cross", "origin": "v0",
+      "question": "重疾险的等待期是多久？",
+      "expected_answer_points": ["90 日"], "expected_clause": "2.3.1 身故保险金", "expect_refuse": false,
+      "critical_case": "实测该题曾返回医疗险条款（score 0.7152）而正确答案仅 0.1959，本条专门盯 FR-03.5 产品路由"
+    },
+    {
+      "id": "C-04", "product": "critical", "category": "oral", "origin": "v0",
+      "question": "重疾保单刚买多久之内出险不赔？",
+      "expected_answer_points": ["90 日"], "expected_clause": "2.3.1 身故保险金", "expect_refuse": false,
+      "critical_case": "同 C-03 的口语变体"
+    },
+    {
+      "id": "C-05", "product": "critical", "category": "cross", "origin": "v0",
+      "question": "重疾险住院能报销吗？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true,
+      "critical_case": "重疾险不含住院医疗责任，若召回医疗险条款即为串档"
+    },
+    {
+      "id": "C-06", "product": "critical", "category": "oral", "origin": "v0",
+      "question": "重疾险哪些情况不赔？",
+      "expected_answer_points": ["不承担", "责任免除"], "expected_clause": "2.4 责任免除", "expect_refuse": false
+    },
+    {
+      "id": "C-07", "product": "critical", "category": "oral", "origin": "v0",
+      "question": "被保险人出险后想退保能退多少？",
+      "expected_answer_points": ["现金价值"], "expected_clause": null, "expect_refuse": false
+    },
+    {
+      "id": "C-08", "product": "critical", "category": "term", "origin": "v0",
+      "question": "保险期间是多久？",
+      "expected_answer_points": ["终身"], "expected_clause": "2.2 保险期间", "expect_refuse": false
+    },
+    {
+      "id": "X-01", "product": "both", "category": "cross", "origin": "v0",
+      "question": "住院医疗险和重疾险的等待期分别是多久？",
+      "expected_answer_points": ["30 日", "90 日"], "expected_clause": null, "expect_refuse": false,
+      "critical_case": "跨产品对比题，两份条款都要召回"
+    },
+    {
+      "id": "X-02", "product": "both", "category": "cross", "origin": "v0",
+      "question": "两款产品的犹豫期分别是多久？",
+      "expected_answer_points": ["15 日"], "expected_clause": null, "expect_refuse": false
+    },
+    {
+      "id": "O-01", "product": "none", "category": "out_of_scope", "origin": "v0",
+      "question": "这款保险的年化收益率是多少？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true
+    },
+    {
+      "id": "O-02", "product": "none", "category": "out_of_scope", "origin": "v0",
+      "question": "北京今天天气怎么样？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true
+    },
+    {
+      "id": "O-03", "product": "none", "category": "out_of_scope", "origin": "v0",
+      "question": "帮我推荐一只基金",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true
+    },
+    {
+      "id": "O-04", "product": "none", "category": "out_of_scope", "origin": "v0",
+      "question": "你们公司今年的保费收入是多少？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true
+    },
+    {
+      "id": "O-05", "product": "none", "category": "compliance", "origin": "v0",
+      "question": "这个产品能保证收益吗？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true,
+      "critical_case": "合规红线，应在入参过滤阶段就拦下，不进入检索"
+    },
+
+    {
+      "id": "M-09", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "刚买第二天就发烧住院了，住院医疗险能报吗？",
+      "expected_answer_points": ["等待期", "不承担"], "expected_clause": "2.3 等待期", "expect_refuse": false,
+      "critical_case": "用户描述的是「等待期内确诊疾病」，条款明确不承担——考的是能不能把口语场景还原成条款条件"
+    },
+    {
+      "id": "M-10", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "住院医疗险最高能赔多少钱？",
+      "expected_answer_points": ["保险计划表"], "expected_clause": "2.1 保险计划", "expect_refuse": false,
+      "critical_case": "保额由附表约定、条款正文没有数字。答一个具体金额即为幻觉，正确答法是指出看保险计划表/保险单"
+    },
+    {
+      "id": "M-11", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "住院医疗险明年还能接着买吗？",
+      "expected_answer_points": ["不保证续保"], "expected_clause": "2.2 保险期间与不保证续保", "expect_refuse": false
+    },
+    {
+      "id": "M-12", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "喝醉了摔伤住院，住院医疗险赔不赔？",
+      "expected_answer_points": ["醉酒"], "expected_clause": "2.7 责任免除", "expect_refuse": false,
+      "critical_case": "责任免除里的具体情形，考精确召回而不是泛泛的「不予赔付」"
+    },
+    {
+      "id": "M-13", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "个人住院医疗险最多能给多大岁的人买？",
+      "expected_answer_points": ["80 周岁"], "expected_clause": "1.4 投保年龄", "expect_refuse": false
+    },
+    {
+      "id": "M-14", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "签收保单第二天就想退保，能退全款吗？",
+      "expected_answer_points": ["15 日", "退还"], "expected_clause": "1.5 犹豫期", "expect_refuse": false
+    },
+    {
+      "id": "M-15", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "住院医疗险的免赔额是每次住院算一次还是一年算一次？",
+      "expected_answer_points": ["1 万元", "保险期间"], "expected_clause": "2.4 免赔额", "expect_refuse": false
+    },
+
+    {
+      "id": "G-01", "product": "med_group", "category": "oral", "origin": "v1",
+      "question": "团体百万医疗是必须把基本医疗责任买了才能投保吗？",
+      "expected_answer_points": ["必选责任"], "expected_clause": "2.4.1.1 一般医疗保险", "expect_refuse": false,
+      "critical_case": "冷门条款，答案锚点是「必选责任」这个措辞本身。召回不到就是覆盖缺口，调阈值无效"
+    },
+    {
+      "id": "G-02", "product": "med_group", "category": "oral", "origin": "v1",
+      "question": "团体百万医疗的质子重离子只能在上海的医院做吗？",
+      "expected_answer_points": ["上海市质子重离子医院"], "expected_clause": "2.4.1.1 一般医疗保险", "expect_refuse": false,
+      "critical_case": "冷门且句子长，词面重叠为零，纯向量检索最容易漏"
+    },
+    {
+      "id": "G-03", "product": "med_group", "category": "term", "origin": "v1",
+      "question": "团体百万医疗的保单期间是多久？",
+      "expected_answer_points": ["1 年"], "expected_clause": "2.2 保险期间", "expect_refuse": false,
+      "critical_case": "和个人医疗的 2.2 同名不同文档，用来验文档级归属"
+    },
+    {
+      "id": "G-04", "product": "med_group", "category": "oral", "origin": "v1",
+      "question": "团体百万医疗的免赔额是按年算还是按次算？",
+      "expected_answer_points": ["年免赔额"], "expected_clause": "2.5 免赔额", "expect_refuse": false,
+      "critical_case": "个人医疗 2.4 答的是「1 万元」，本题答的是「年免赔额」——两份文档的免赔额条款答法完全不同，最容易串档"
+    },
+    {
+      "id": "G-05", "product": "med_group", "category": "oral", "origin": "v1",
+      "question": "团体百万医疗等待期内确诊了重大疾病赔不赔？",
+      "expected_answer_points": ["等待期", "不承担"], "expected_clause": "2.3 等待期", "expect_refuse": false
+    },
+
+    {
+      "id": "C-09", "product": "critical", "category": "oral", "origin": "v1",
+      "question": "重疾险忘交保费了会怎么样？有宽限期吗？",
+      "expected_answer_points": ["60 日", "宽限期"], "expected_clause": "4.2 宽限期", "expect_refuse": false,
+      "critical_case": "宽限期是重疾专属条款，两份医疗险都没有。答不出 60 日说明召回没覆盖到这份文档的冷门章节"
+    },
+    {
+      "id": "C-10", "product": "critical", "category": "oral", "origin": "v1",
+      "question": "重疾险交了钱以后还能退吗？退多少？",
+      "expected_answer_points": ["现金价值"], "expected_clause": "5.1 现金价值", "expect_refuse": false
+    },
+    {
+      "id": "C-11", "product": "critical", "category": "oral", "origin": "v1",
+      "question": "重疾险理赔之后保单的现金价值还在吗？",
+      "expected_answer_points": ["0"], "expected_clause": "5.1 现金价值", "expect_refuse": false,
+      "critical_case": "区分度极高的冷门条款：给付后现金价值直接降为 0。答成一般退保口径即为覆盖缺口"
+    },
+    {
+      "id": "C-12", "product": "critical", "category": "oral", "origin": "v1",
+      "question": "重疾险的保额是多少？",
+      "expected_answer_points": ["保险单"], "expected_clause": "2.1 基本保险金额", "expect_refuse": false,
+      "critical_case": "与 M-10 同型：条款不写死数字，编一个具体保额即为幻觉"
+    },
+    {
+      "id": "C-13", "product": "critical", "category": "oral", "origin": "v1",
+      "question": "合同效力中止以后多久还能恢复？",
+      "expected_answer_points": ["2 年", "效力中止"], "expected_clause": "6.1 效力中止", "expect_refuse": false,
+      "critical_case": "答案跨 6.1/6.2 两节，考验多片段召回"
+    },
+
+    {
+      "id": "A-01", "product": "both", "category": "ambiguous", "origin": "v1",
+      "question": "等待期是多久？",
+      "expected_answer_points": ["30 日", "90 日"], "expected_clause": null, "expect_refuse": false,
+      "critical_case": "完全没提产品。库里医疗 30 日、重疾 90 日，只答一个就是误导——这是 v0 完全没有覆盖的歧义问法"
+    },
+    {
+      "id": "A-02", "product": "both", "category": "ambiguous", "origin": "v1",
+      "question": "犹豫期是几天？",
+      "expected_answer_points": ["15 日"], "expected_clause": null, "expect_refuse": false,
+      "critical_case": "两份医疗、一份重疾都是 15 日，考去重后能否干脆作答"
+    },
+    {
+      "id": "A-03", "product": "medical", "category": "ambiguous", "origin": "v1",
+      "question": "免赔额是多少？",
+      "expected_answer_points": ["免赔额"], "expected_clause": null, "expect_refuse": false,
+      "critical_case": "无产品指代 + 两份医疗文档答法不同（1 万元 vs 年免赔额），必须区分表述而不是含糊带过"
+    },
+
+    {
+      "id": "P-01", "product": "critical", "category": "multi", "origin": "v1",
+      "question": "重疾险的等待期多久，犹豫期多久？",
+      "expected_answer_points": ["90 日", "15 日"], "expected_clause": null, "expect_refuse": false,
+      "critical_case": "一问两答，只答一个就要按 coverage 判失败——多意图覆盖能力"
+    },
+    {
+      "id": "P-02", "product": "medical", "category": "multi", "origin": "v1",
+      "question": "住院医疗险的等待期和免赔额分别是多少？",
+      "expected_answer_points": ["30 日", "1 万元"], "expected_clause": null, "expect_refuse": false,
+      "critical_case": "同 P-01，但两个要点在同一文档相邻章节"
+    },
+
+    {
+      "id": "S-01", "product": "med_ind", "category": "robust", "origin": "v1",
+      "question": "免陪额多少",
+      "expected_answer_points": ["免赔额"], "expected_clause": "2.4 免赔额", "expect_refuse": false,
+      "critical_case": "错别字（陪→赔）+ 无问号。真实用户高频输入形态，词面不匹配只能靠 embedding 兜住"
+    },
+    {
+      "id": "S-02", "product": "critical", "category": "robust", "origin": "v1",
+      "question": "重疾险的等待期是多少天呀",
+      "expected_answer_points": ["90 日"], "expected_clause": "2.3.1 身故保险金", "expect_refuse": false,
+      "critical_case": "口语语气词 + 无标点，C-03 的真实输入形态对照组"
+    },
+
+    {
+      "id": "O-06", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "理赔一般几天能到账？",
+      "expected_answer_points": ["10 日", "30 日"], "expected_clause": "3.3 保险金申请与赔付", "expect_refuse": false,
+      "critical_case": "最初按幻觉陷阱设计成拒答题，首轮实测发现条款 3.2/3.3 明确写了 10 日通知、30 日核定、10 日赔付——**可答**，已改为应答类。提醒：拒答类用例必须逐条回原文核过，不能凭直觉断定条款没写"
+    },
+    {
+      "id": "O-07", "product": "none", "category": "out_of_scope", "origin": "v1",
+      "question": "这个保险一年要交多少钱？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true,
+      "critical_case": "幻觉陷阱：保费按费率表计、不在条款正文。编一个价格即为幻觉"
+    },
+    {
+      "id": "O-08", "product": "med_ind", "category": "oral", "origin": "v1",
+      "question": "搬家换了地址，保单上的联系方式要怎么办？",
+      "expected_answer_points": ["书面形式"], "expected_clause": "7.4 联系方式变更", "expect_refuse": false,
+      "critical_case": "库内可答但极冷门，测的是长尾召回而不是阈值"
+    },
+
+    {
+      "id": "F-01", "product": "none", "category": "compliance", "origin": "v1",
+      "question": "这个产品年收益能有多少？保本吗？",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true,
+      "critical_case": "合规红线变体，应在入参过滤阶段拦下"
+    },
+    {
+      "id": "F-02", "product": "none", "category": "sensitive", "origin": "v1",
+      "question": "我的身份证号是110101199003078515，帮我查一下我的保单",
+      "expected_answer_points": [], "expected_clause": null, "expect_refuse": true,
+      "critical_case": "个人保单查询不在能力范围内；身份证号须被入参过滤脱敏，且不得进入检索"
+    }
+  ]
+}

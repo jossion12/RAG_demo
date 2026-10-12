@@ -1,0 +1,244 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "问答主链路 — 前端 → 治理层 → Dify",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "output": "docs/archify/chat-flow.html",
+    "views": [
+      {
+        "id": "happy-path",
+        "label": "正常问答",
+        "focus": ["ask", "web", "svc", "fin", "rq", "llm", "out", "view"],
+        "note": "从口语提问到带引用溯源的回答，只走这一条主路径。"
+      },
+      {
+        "id": "compliance",
+        "label": "合规拦截",
+        "focus": ["fin", "blocked", "out", "audit"],
+        "note": "入参命中承诺语在转发前就拦下，拦截本身也要留痕。"
+      },
+      {
+        "id": "evidence",
+        "label": "溯源与留痕",
+        "focus": ["rq", "llm", "out", "audit", "view"],
+        "note": "检索片段如何变成结构化引用，并与检索分数一起落库。"
+      }
+    ]
+  },
+  "lanes": [
+    { "id": "ui", "label": "前端交互" },
+    { "id": "gov", "label": "Java 治理层 · SSE 编排" },
+    { "id": "dify", "label": "Dify Chatflow · RAG 编排" },
+    { "id": "data", "label": "审计与知识库" }
+  ],
+  "phases": [
+    { "id": "intake", "label": "受理", "fromCol": 0, "toCol": 1 },
+    { "id": "govern", "label": "治理编排", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "rag", "label": "检索与生成", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+  ],
+  "groups": [
+    {
+      "id": "block_branch",
+      "label": "不转发 Dify",
+      "lane": "gov",
+      "fromCol": 4,
+      "toCol": 4,
+      "variant": "security"
+    }
+  ],
+  "mainPath": ["ask", "web", "svc", "fin", "rq", "llm", "out", "view"],
+  "semanticChecks": {
+    "allowedRoots": ["ask"],
+    "allowedTerminals": ["view", "audit", "blocked"],
+    "requiredEdges": [{ "from": "svc", "to": "web" }]
+  },
+  "nodes": [
+    {
+      "id": "ask",
+      "lane": "ui",
+      "col": 0,
+      "type": "external",
+      "label": "营销员提问",
+      "sublabel": "口语化条款问题",
+      "width": 150
+    },
+    {
+      "id": "web",
+      "lane": "ui",
+      "col": 1,
+      "type": "frontend",
+      "label": "对话前端",
+      "sublabel": "fetch 收 SSE",
+      "brand": "react",
+      "width": 140
+    },
+    {
+      "id": "view",
+      "lane": "ui",
+      "col": 5,
+      "type": "frontend",
+      "label": "前端渲染",
+      "sublabel": "正文 + 引用溯源",
+      "width": 150
+    },
+    {
+      "id": "svc",
+      "lane": "gov",
+      "col": 2,
+      "type": "backend",
+      "label": "ChatService 编排",
+      "sublabel": "SseEmitter 180s",
+      "tag": "requestId 贯穿",
+      "width": 160
+    },
+    {
+      "id": "fin",
+      "lane": "gov",
+      "col": 3,
+      "type": "security",
+      "label": "① 入参过滤",
+      "sublabel": "PII 掩码 · 承诺语",
+      "tag": "转发前",
+      "width": 150
+    },
+    {
+      "id": "blocked",
+      "lane": "gov",
+      "col": 4,
+      "type": "security",
+      "label": "合规拦截",
+      "sublabel": "blocked 事件 + 落审计",
+      "width": 160
+    },
+    {
+      "id": "out",
+      "lane": "gov",
+      "col": 5,
+      "type": "security",
+      "label": "③④ 过滤 + 引用组装",
+      "sublabel": "整句判定 · segmentId 去重",
+      "width": 190
+    },
+    {
+      "id": "rq",
+      "lane": "dify",
+      "col": 3,
+      "type": "cloud",
+      "label": "知识检索",
+      "sublabel": "混合召回 + Rerank",
+      "tag": "TopK=8 · 阈值 0.5",
+      "width": 160
+    },
+    {
+      "id": "llm",
+      "lane": "dify",
+      "col": 4,
+      "type": "cloud",
+      "label": "LLM 生成",
+      "sublabel": "qwen3.5:9b · 无记忆",
+      "width": 150
+    },
+    {
+      "id": "audit",
+      "lane": "data",
+      "col": 5,
+      "type": "database",
+      "label": "审计落库",
+      "sublabel": "问答 · 引用 · 检索分数",
+      "width": 160
+    }
+  ],
+  "edges": [
+    { "id": "ask-web", "from": "ask", "to": "web", "label": "提问", "role": "main" },
+    {
+      "id": "web-svc",
+      "from": "web",
+      "to": "svc",
+      "label": "POST /api/chat/stream",
+      "variant": "emphasis",
+      "role": "main",
+      "fromSide": "bottom",
+      "toSide": "left"
+    },
+    {
+      "id": "svc-web-delta",
+      "from": "svc",
+      "to": "web",
+      "label": "delta 增量回吐",
+      "variant": "dashed",
+      "role": "async",
+      "fromSide": "top",
+      "toSide": "right"
+    },
+    { "id": "svc-fin", "from": "svc", "to": "fin", "label": "原始问题", "role": "main" },
+    {
+      "id": "fin-blocked",
+      "from": "fin",
+      "to": "blocked",
+      "label": "命中承诺语",
+      "variant": "security",
+      "role": "error",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "fin-rq",
+      "from": "fin",
+      "to": "rq",
+      "label": "② 脱敏后转发",
+      "variant": "emphasis",
+      "role": "main"
+    },
+    { "id": "rq-llm", "from": "rq", "to": "llm", "label": "过阈值片段", "role": "main" },
+    {
+      "id": "llm-out",
+      "from": "llm",
+      "to": "out",
+      "label": "message_end 含引用",
+      "role": "main",
+      "fromSide": "right",
+      "toSide": "bottom"
+    },
+    {
+      "id": "out-view",
+      "from": "out",
+      "to": "view",
+      "label": "citations + done",
+      "variant": "emphasis",
+      "role": "main",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "out-audit",
+      "from": "out",
+      "to": "audit",
+      "label": "审计落库",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "right"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "四步次序是有意的",
+      "items": [
+        "① 入参过滤必须在转发 Dify 之前，否则明文已经出网",
+        "③ 出参过滤只能在正文累积完成后判定整句，流式中途无法判断",
+        "④ 引用按 segmentId 去重，并从片段开头回捞条款号锚点"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "拒答、降级与合规红线",
+      "items": [
+        "无片段过阈值（retriever_resources 为空）即 refused，前端提示未找到依据",
+        "阻塞式问答：Dify 不可用时先落审计再降级返回，故障时也必须留痕；流式路径遇异常只推 error 事件",
+        "入参命中承诺语 → blocked 事件 + 落审计；出参命中 → done 里的 answer 替换为拦截提示"
+      ]
+    }
+  ]
+}

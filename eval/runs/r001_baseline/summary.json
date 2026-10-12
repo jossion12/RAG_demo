@@ -1,0 +1,109 @@
+{
+  "tag": "r001_baseline",
+  "cases": "eval\\eval_cases_v2.json",
+  "mode": "sse",
+  "base": "http://localhost:8080",
+  "elapsed_s": 0.0,
+  "pass": 30,
+  "total": 52,
+  "summ": {
+    "answer": [
+      21,
+      42
+    ],
+    "refuse": [
+      9,
+      10
+    ],
+    "cross": [
+      2,
+      4
+    ],
+    "oral": [
+      9,
+      28
+    ],
+    "cite": [
+      17,
+      34
+    ],
+    "wrong_product": [
+      4,
+      42
+    ],
+    "clause_mismatch": [
+      3,
+      42
+    ],
+    "over_refusal": [
+      11,
+      42
+    ],
+    "unsupported": [
+      3,
+      42
+    ],
+    "p50": 53038,
+    "p95": 69520,
+    "delta_mismatch": 32,
+    "toc_noise": [
+      13,
+      52
+    ]
+  },
+  "params": {
+    "dataset_retrieval_model": {
+      "top_k": 30,
+      "weights": {
+        "weight_type": "customized",
+        "vector_setting": {
+          "vector_weight": 0.7,
+          "embedding_model_name": "bge-m3:latest",
+          "embedding_provider_name": "langgenius/ollama/ollama"
+        },
+        "keyword_setting": {
+          "keyword_weight": 0.3
+        }
+      },
+      "search_method": "hybrid_search",
+      "reranking_mode": "reranking_model",
+      "reranking_model": {
+        "reranking_model_name": "bge-reranker-v2-m3",
+        "reranking_provider_name": "langgenius/huggingface_tei/huggingface_tei"
+      },
+      "score_threshold": 0.1,
+      "reranking_enable": true,
+      "score_threshold_enabled": true
+    },
+    "workflow_id": "3ab42de2-6ae6-43c3-a2ee-cf7489beaa6d",
+    "nodes": [
+      {
+        "node": "1711528915811",
+        "title": "知识检索",
+        "multiple_retrieval_config": {
+          "top_k": 30,
+          "reranking_mode": "reranking_model",
+          "reranking_model": {
+            "model": "bge-reranker-v2-m3",
+            "provider": "langgenius/huggingface_tei/huggingface_tei"
+          },
+          "score_threshold": 0.1,
+          "reranking_enable": true
+        }
+      },
+      {
+        "node": "1711528917469",
+        "title": "LLM",
+        "model": "qwen3.5:9b",
+        "completion_params": {
+          "think": false,
+          "top_p": 1,
+          "temperature": 0.1
+        },
+        "prompt_template": [
+          "你是一名保险条款问答助手。请严格依据【检索到的条款内容】回答用户问题。\n\n规则：\n1. 只使用【检索到的条款内容】中的信息，不得用你自己的知识补充或推测。\n2. 如果【检索到的条款内容】中没有回答问题所需的信息，请直接回复\"未找到相关信息\"，不要猜测、不要编造。\n3. 引用条款时保留原文的数字、日期、金额、天数等关键信息，不要改写数值。\n4. 答案末尾不要添加免责提示或任何额外说明。\n5. 这是单轮问答，不需要追问或澄清。\n\n【检索到的条款内容】\n{{#context#}}\n\n【用户问题】\n{{#sys.query#}}"
+        ]
+      }
+    ]
+  }
+}

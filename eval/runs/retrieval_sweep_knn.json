@@ -1,0 +1,8796 @@
+{
+  "stage": "knn",
+  "generated": "2026-10-12 11:31:12",
+  "results": [
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 5,
+        "_vw": 0.7,
+        "_kw": 0.30000000000000004
+      },
+      "label": "th=0.10 top_k=5   vw=0.7 kw=0.3",
+      "clause_hit": 18,
+      "clause_n": 34,
+      "title_only": 7,
+      "product_ok": 33,
+      "product_n": 42,
+      "noise": 19,
+      "avg_n": 2.4,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.77881753,
+          "scores": [
+            0.7788,
+            0.7788,
+            0.4298
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13881165,
+          "scores": [
+            0.1388
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.7247729,
+          "scores": [
+            0.7248,
+            0.5898,
+            0.2275,
+            0.1644
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 2,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5613651,
+          "scores": [
+            0.5614,
+            0.3467
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.7322,
+            0.7206,
+            0.698
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8224745,
+          "scores": [
+            0.8225,
+            0.6461
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13117322,
+          "scores": [
+            0.1312
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.3069,
+            0.1542
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.91117966,
+          "scores": [
+            0.9112,
+            0.6459,
+            0.306,
+            0.282
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.1936
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.6461254,
+          "scores": [
+            0.6461,
+            0.2002,
+            0.1543
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 2,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.31997076,
+          "scores": [
+            0.32,
+            0.1833
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1989965,
+          "scores": [
+            0.199,
+            0.1761,
+            0.1502
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.30611205,
+          "scores": [
+            0.3061,
+            0.2411
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.26020142,
+          "scores": [
+            0.2602
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.3069,
+            0.1542
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1852092,
+          "scores": [
+            0.1852
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24148938,
+          "scores": [
+            0.2415,
+            0.1512
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.14366761,
+          "scores": [
+            0.1437
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 4,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.4082,
+            0.4045,
+            0.175
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.2670257,
+          "scores": [
+            0.267
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 5,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.39846498,
+          "scores": [
+            0.3985,
+            0.395,
+            0.2203,
+            0.219,
+            0.1734
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.34620965,
+          "scores": [
+            0.3462,
+            0.3373,
+            0.2818,
+            0.1659
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.6598436,
+          "scores": [
+            0.6598,
+            0.5762,
+            0.1056
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.39018536,
+          "scores": [
+            0.3902,
+            0.3558
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9222,
+            0.1965
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7841538,
+          "scores": [
+            0.7842,
+            0.5658,
+            0.1988,
+            0.162
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.71042746,
+          "scores": [
+            0.7104,
+            0.2064
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 2,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.19102567,
+          "scores": [
+            0.191,
+            0.1076
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.7556,
+            0.7556
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.6547844,
+          "scores": [
+            0.6548,
+            0.6213,
+            0.2091,
+            0.1857
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6457,
+            0.131
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.3201,
+            0.2395,
+            0.1018
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9298237,
+          "scores": [
+            0.9298,
+            0.8444,
+            0.1951,
+            0.1431
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.7247729,
+          "scores": [
+            0.7248,
+            0.5898,
+            0.2275,
+            0.1644
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.90448195,
+          "scores": [
+            0.9045,
+            0.5682,
+            0.3369,
+            0.3092,
+            0.1012
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.3086,
+            0.1624
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 4,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8392076,
+          "scores": [
+            0.8392,
+            0.7304,
+            0.3243,
+            0.2404
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.72758853,
+          "scores": [
+            0.7276,
+            0.3762,
+            0.335
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.335242,
+          "scores": [
+            0.3352
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.2860695,
+          "scores": [
+            0.2861,
+            0.1798,
+            0.1744,
+            0.1543,
+            0.1269
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13695431,
+          "scores": [
+            0.137,
+            0.137
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 10,
+        "_vw": 0.7,
+        "_kw": 0.30000000000000004
+      },
+      "label": "th=0.10 top_k=10  vw=0.7 kw=0.3",
+      "clause_hit": 24,
+      "clause_n": 34,
+      "title_only": 6,
+      "product_ok": 36,
+      "product_n": 42,
+      "noise": 17,
+      "avg_n": 3.83,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 4,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.77881753,
+          "scores": [
+            0.7788,
+            0.7788,
+            0.4303,
+            0.1716
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13892843,
+          "scores": [
+            0.1389
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85403454,
+          "scores": [
+            0.854,
+            0.8228,
+            0.7248,
+            0.164
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 4,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5898936,
+          "scores": [
+            0.5899,
+            0.561,
+            0.3464,
+            0.3038
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.7322,
+            0.7206,
+            0.6981,
+            0.1517
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.82233185,
+          "scores": [
+            0.8223,
+            0.6459
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13128456,
+          "scores": [
+            0.1313
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8284,
+            0.3069,
+            0.1542,
+            0.1253
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9116528,
+          "scores": [
+            0.9117,
+            0.7345,
+            0.6461,
+            0.6348,
+            0.3065,
+            0.2821
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.1935
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7076068,
+          "scores": [
+            0.7076,
+            0.6461,
+            0.3585,
+            0.2006,
+            0.1543
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 4,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.31997076,
+          "scores": [
+            0.32,
+            0.1901,
+            0.1833,
+            0.1422
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1989965,
+          "scores": [
+            0.199,
+            0.1761,
+            0.1604,
+            0.1502
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5236031,
+          "scores": [
+            0.5236,
+            0.36,
+            0.306,
+            0.2411,
+            0.1058
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.26057756,
+          "scores": [
+            0.2606,
+            0.177,
+            0.1641,
+            0.118
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8284,
+            0.3069,
+            0.1542,
+            0.1254
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.22151907,
+          "scores": [
+            0.2215,
+            0.1852,
+            0.1341
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24148938,
+          "scores": [
+            0.2415,
+            0.1512
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.14366761,
+          "scores": [
+            0.1437
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.19961986,
+          "scores": [
+            0.1996,
+            0.1294
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.4079,
+            0.4036,
+            0.3508,
+            0.1747
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.26683465,
+          "scores": [
+            0.2668,
+            0.1871,
+            0.1596
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 9,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.41851866,
+          "scores": [
+            0.4185,
+            0.4185,
+            0.3992,
+            0.3952,
+            0.2202,
+            0.2202
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.39140594,
+          "scores": [
+            0.3914,
+            0.3469,
+            0.3373,
+            0.2819,
+            0.1656,
+            0.1156
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.75437254,
+          "scores": [
+            0.7544,
+            0.6598,
+            0.5762,
+            0.5449,
+            0.4729,
+            0.242
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.38966265,
+          "scores": [
+            0.3897,
+            0.3561,
+            0.1338,
+            0.1016
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9478,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10762492,
+          "scores": [
+            0.1076
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10989668,
+          "scores": [
+            0.1099
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7841538,
+          "scores": [
+            0.7842,
+            0.5658,
+            0.3972,
+            0.2337,
+            0.162,
+            0.1357
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8467045,
+          "scores": [
+            0.8467,
+            0.7107,
+            0.5873,
+            0.3676,
+            0.2064
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 4,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.19102567,
+          "scores": [
+            0.191,
+            0.1777,
+            0.1142,
+            0.1076
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.8868,
+            0.7963,
+            0.7556,
+            0.7556,
+            0.723
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.65423226,
+          "scores": [
+            0.6542,
+            0.6209,
+            0.5887,
+            0.2302,
+            0.2091
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6455,
+            0.3063,
+            0.2339,
+            0.13,
+            0.1154
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.6723,
+            0.4537,
+            0.3201,
+            0.2617,
+            0.1018
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9298237,
+          "scores": [
+            0.9298,
+            0.8444,
+            0.4076,
+            0.3551,
+            0.2006,
+            0.1951
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8228,
+            0.7251,
+            0.164
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 9,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9046505,
+          "scores": [
+            0.9047,
+            0.6705,
+            0.6412,
+            0.608,
+            0.5682,
+            0.3368
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4239
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.3079,
+            0.1624
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8392076,
+          "scores": [
+            0.8392,
+            0.7304,
+            0.7138,
+            0.4968,
+            0.4518,
+            0.3243
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.72749174,
+          "scores": [
+            0.7275,
+            0.3757,
+            0.3344,
+            0.1056
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3348069,
+          "scores": [
+            0.3348
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.2860695,
+          "scores": [
+            0.2861,
+            0.1795,
+            0.1744,
+            0.156,
+            0.1543,
+            0.1267
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.2885691,
+          "scores": [
+            0.2886,
+            0.137,
+            0.137,
+            0.1056
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 15,
+        "_vw": 0.7,
+        "_kw": 0.30000000000000004
+      },
+      "label": "th=0.10 top_k=15  vw=0.7 kw=0.3",
+      "clause_hit": 26,
+      "clause_n": 34,
+      "title_only": 4,
+      "product_ok": 36,
+      "product_n": 42,
+      "noise": 19,
+      "avg_n": 4.69,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.77881753,
+          "scores": [
+            0.7788,
+            0.7788,
+            0.4297,
+            0.3716,
+            0.242,
+            0.1968
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13892843,
+          "scores": [
+            0.1389
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8225,
+            0.7248,
+            0.1641,
+            0.114
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 4,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5898936,
+          "scores": [
+            0.5899,
+            0.5621,
+            0.3462,
+            0.3038
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.7322,
+            0.7206,
+            0.698,
+            0.6554,
+            0.1517
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.82233185,
+          "scores": [
+            0.8223,
+            0.6461
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1309508,
+          "scores": [
+            0.131
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.828,
+            0.4808,
+            0.3063,
+            0.2516,
+            0.1543
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.91117966,
+          "scores": [
+            0.9112,
+            0.7345,
+            0.6459,
+            0.6348,
+            0.3065,
+            0.2821
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.1935
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.7076068,
+          "scores": [
+            0.7076,
+            0.6511,
+            0.646,
+            0.3593,
+            0.1999,
+            0.1861
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 5,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.32018328,
+          "scores": [
+            0.3202,
+            0.1904,
+            0.1833,
+            0.1421,
+            0.122
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7592254,
+          "scores": [
+            0.7592,
+            0.4247,
+            0.2804,
+            0.1604,
+            0.1494
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5236031,
+          "scores": [
+            0.5236,
+            0.3608,
+            0.306,
+            0.2402,
+            0.1719,
+            0.1054
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.26057756,
+          "scores": [
+            0.2606,
+            0.177,
+            0.1641,
+            0.118
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.828,
+            0.4808,
+            0.3063,
+            0.2516,
+            0.1543
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.22084616,
+          "scores": [
+            0.2208,
+            0.1854,
+            0.1338
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24220563,
+          "scores": [
+            0.2422,
+            0.1512
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1435475,
+          "scores": [
+            0.1435
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.19946389,
+          "scores": [
+            0.1995,
+            0.1294
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.4079,
+            0.4045,
+            0.3508,
+            0.2473,
+            0.1747
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.26683465,
+          "scores": [
+            0.2668,
+            0.1871,
+            0.1596
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 11,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.4911127,
+          "scores": [
+            0.4911,
+            0.4189,
+            0.4189,
+            0.3985,
+            0.3957,
+            0.2203
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.39152226,
+          "scores": [
+            0.3915,
+            0.3462,
+            0.3373,
+            0.2818,
+            0.1967,
+            0.1657
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.75437254,
+          "scores": [
+            0.7544,
+            0.6598,
+            0.5762,
+            0.5449,
+            0.4721,
+            0.242
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.38966265,
+          "scores": [
+            0.3897,
+            0.3846,
+            0.3561,
+            0.2307,
+            0.1338,
+            0.1014
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9478,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10800066,
+          "scores": [
+            0.108
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.11716747,
+          "scores": [
+            0.1172
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7841538,
+          "scores": [
+            0.7842,
+            0.7268,
+            0.5658,
+            0.3972,
+            0.162,
+            0.1363
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8468312,
+          "scores": [
+            0.8468,
+            0.7107,
+            0.5878,
+            0.3674,
+            0.2059
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24707796,
+          "scores": [
+            0.2471,
+            0.1918,
+            0.1777,
+            0.1176,
+            0.1109,
+            0.1074
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.8866,
+            0.7966,
+            0.7556,
+            0.7556,
+            0.7277
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6547844,
+          "scores": [
+            0.6548,
+            0.6209,
+            0.589,
+            0.4662,
+            0.2302,
+            0.2091
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6452,
+            0.32,
+            0.32,
+            0.3199,
+            0.3068
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 9,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.7467,
+            0.6723,
+            0.4531,
+            0.3286,
+            0.3201
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 7,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9298237,
+          "scores": [
+            0.9298,
+            0.8444,
+            0.4076,
+            0.3545,
+            0.2009,
+            0.1951
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85403454,
+          "scores": [
+            0.854,
+            0.8228,
+            0.7248,
+            0.164,
+            0.114
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 10,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.90448195,
+          "scores": [
+            0.9045,
+            0.7439,
+            0.6707,
+            0.6416,
+            0.6075,
+            0.5682
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238,
+            0.2977
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.3079,
+            0.1624
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 11,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8392076,
+          "scores": [
+            0.8392,
+            0.7304,
+            0.713,
+            0.4968,
+            0.4518,
+            0.4496
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.72749174,
+          "scores": [
+            0.7275,
+            0.3758,
+            0.3344,
+            0.1472,
+            0.1054
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.3348069,
+          "scores": [
+            0.3348,
+            0.1219
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.28656837,
+          "scores": [
+            0.2866,
+            0.1792,
+            0.1744,
+            0.1557,
+            0.1543,
+            0.127
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.28846887,
+          "scores": [
+            0.2885,
+            0.1509,
+            0.1367,
+            0.1367,
+            0.1056
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 20,
+        "_vw": 0.7,
+        "_kw": 0.30000000000000004
+      },
+      "label": "th=0.10 top_k=20  vw=0.7 kw=0.3",
+      "clause_hit": 26,
+      "clause_n": 34,
+      "title_only": 5,
+      "product_ok": 37,
+      "product_n": 42,
+      "noise": 19,
+      "avg_n": 5.44,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8003801,
+          "scores": [
+            0.8004,
+            0.7786,
+            0.7786,
+            0.4297,
+            0.3716,
+            0.242
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13892843,
+          "scores": [
+            0.1389
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8228,
+            0.7248,
+            0.164,
+            0.114
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 6,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5898936,
+          "scores": [
+            0.5899,
+            0.561,
+            0.3462,
+            0.3038,
+            0.2726,
+            0.2318
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.7322,
+            0.7206,
+            0.698,
+            0.6554,
+            0.1517
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8224745,
+          "scores": [
+            0.8225,
+            0.6461
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13128456,
+          "scores": [
+            0.1313,
+            0.1076
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4809,
+            0.3678,
+            0.3063,
+            0.1592
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9113377,
+          "scores": [
+            0.9113,
+            0.7345,
+            0.6461,
+            0.6348,
+            0.615,
+            0.3059
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.1936
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.70750576,
+          "scores": [
+            0.7075,
+            0.6507,
+            0.6461,
+            0.3597,
+            0.2006,
+            0.1861
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 9,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.31997076,
+          "scores": [
+            0.32,
+            0.1904,
+            0.1833,
+            0.1573,
+            0.1573,
+            0.1573
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7595823,
+          "scores": [
+            0.7596,
+            0.4247,
+            0.2804,
+            0.1604,
+            0.1494
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5236031,
+          "scores": [
+            0.5236,
+            0.3608,
+            0.306,
+            0.2411,
+            0.2246,
+            0.1719
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.26057756,
+          "scores": [
+            0.2606,
+            0.2031,
+            0.177,
+            0.1641,
+            0.118,
+            0.1156
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4807,
+            0.3675,
+            0.3069,
+            0.1592
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.22135067,
+          "scores": [
+            0.2214,
+            0.1854,
+            0.1341,
+            0.1041
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24220563,
+          "scores": [
+            0.2422,
+            0.1507
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.14330755,
+          "scores": [
+            0.1433
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.19946389,
+          "scores": [
+            0.1995,
+            0.1294
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.409,
+            0.404,
+            0.3508,
+            0.2473,
+            0.1751
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.26683465,
+          "scores": [
+            0.2668,
+            0.1865,
+            0.1593
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 13,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.49105167,
+          "scores": [
+            0.4911,
+            0.4186,
+            0.4186,
+            0.3992,
+            0.3952,
+            0.3349
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3918131,
+          "scores": [
+            0.3918,
+            0.3468,
+            0.337,
+            0.2818,
+            0.1964,
+            0.1656
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.7545535,
+          "scores": [
+            0.7546,
+            0.6598,
+            0.5762,
+            0.5449,
+            0.4721,
+            0.242
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.38966265,
+          "scores": [
+            0.3897,
+            0.3841,
+            0.3559,
+            0.2307,
+            0.2219,
+            0.179
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9478,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10762492,
+          "scores": [
+            0.1076
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.11716747,
+          "scores": [
+            0.1172
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7841538,
+          "scores": [
+            0.7842,
+            0.7255,
+            0.5658,
+            0.5496,
+            0.4272,
+            0.3972
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8468312,
+          "scores": [
+            0.8468,
+            0.7107,
+            0.5873,
+            0.3673,
+            0.2743,
+            0.2066
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24707796,
+          "scores": [
+            0.2471,
+            0.1918,
+            0.1839,
+            0.1777,
+            0.1176,
+            0.1105
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.8866,
+            0.8157,
+            0.7966,
+            0.7556,
+            0.7556
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.65423226,
+          "scores": [
+            0.6542,
+            0.6213,
+            0.589,
+            0.4662,
+            0.2302,
+            0.2091
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 11,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6459,
+            0.4873,
+            0.4861,
+            0.4861,
+            0.4861
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 11,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.7467,
+            0.6721,
+            0.5989,
+            0.4533,
+            0.3283
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.92956835,
+          "scores": [
+            0.9296,
+            0.8445,
+            0.594,
+            0.4076,
+            0.3551,
+            0.2007
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8225,
+            0.7251,
+            0.1649,
+            0.114
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 12,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.90448195,
+          "scores": [
+            0.9045,
+            0.7439,
+            0.6707,
+            0.6416,
+            0.6075,
+            0.5682
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238,
+            0.2977,
+            0.1222
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.3079,
+            0.1624
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 12,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8392076,
+          "scores": [
+            0.8392,
+            0.7303,
+            0.7132,
+            0.4975,
+            0.4519,
+            0.4501
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7272981,
+          "scores": [
+            0.7273,
+            0.3758,
+            0.3344,
+            0.1474,
+            0.1287,
+            0.1074
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.335242,
+          "scores": [
+            0.3352,
+            0.1826,
+            0.1217
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.2860695,
+          "scores": [
+            0.2861,
+            0.1795,
+            0.1744,
+            0.156,
+            0.1543,
+            0.1267
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.28846887,
+          "scores": [
+            0.2885,
+            0.1509,
+            0.1371,
+            0.1371,
+            0.1056
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 30,
+        "_vw": 0.7,
+        "_kw": 0.30000000000000004
+      },
+      "label": "th=0.10 top_k=30  vw=0.7 kw=0.3",
+      "clause_hit": 27,
+      "clause_n": 34,
+      "title_only": 4,
+      "product_ok": 37,
+      "product_n": 42,
+      "noise": 18,
+      "avg_n": 6.46,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8003801,
+          "scores": [
+            0.8004,
+            0.7785,
+            0.7785,
+            0.5063,
+            0.4297,
+            0.3716
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13892843,
+          "scores": [
+            0.1389
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85403454,
+          "scores": [
+            0.854,
+            0.8228,
+            0.7251,
+            0.1649,
+            0.1277,
+            0.114
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 6,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5901298,
+          "scores": [
+            0.5901,
+            0.5615,
+            0.3464,
+            0.3042,
+            0.2725,
+            0.2311
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.7322,
+            0.7206,
+            0.698,
+            0.6554,
+            0.447
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8224745,
+          "scores": [
+            0.8225,
+            0.6461,
+            0.1311,
+            0.1112
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13128456,
+          "scores": [
+            0.1313,
+            0.1074
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4807,
+            0.3672,
+            0.3063,
+            0.2295
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9114953,
+          "scores": [
+            0.9115,
+            0.7345,
+            0.6461,
+            0.6347,
+            0.6129,
+            0.3061
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.202,
+            0.1936,
+            0.1059
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 14,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.70811164,
+          "scores": [
+            0.7081,
+            0.6509,
+            0.6461,
+            0.3585,
+            0.2162,
+            0.2048
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3198645,
+          "scores": [
+            0.3199,
+            0.1904,
+            0.1833,
+            0.157,
+            0.157,
+            0.157
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7595823,
+          "scores": [
+            0.7596,
+            0.4247,
+            0.2804,
+            0.1981,
+            0.1604,
+            0.1355
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.523192,
+          "scores": [
+            0.5232,
+            0.36,
+            0.3061,
+            0.2402,
+            0.2239,
+            0.1718
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.26020142,
+          "scores": [
+            0.2602,
+            0.2034,
+            0.1768,
+            0.1647,
+            0.1626,
+            0.1471
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4813,
+            0.3672,
+            0.3069,
+            0.2295
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.35320508,
+          "scores": [
+            0.3532,
+            0.2208,
+            0.1854,
+            0.1338,
+            0.1287,
+            0.1041
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24220563,
+          "scores": [
+            0.2422,
+            0.1507
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1435475,
+          "scores": [
+            0.1435
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.19961986,
+          "scores": [
+            0.1996,
+            0.1295
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.4079,
+            0.4045,
+            0.3508,
+            0.2469,
+            0.1747
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.2666436,
+          "scores": [
+            0.2666,
+            0.1865,
+            0.1597
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 16,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.49105167,
+          "scores": [
+            0.4911,
+            0.4186,
+            0.4174,
+            0.3992,
+            0.3952,
+            0.3349
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 12,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3918131,
+          "scores": [
+            0.3918,
+            0.3469,
+            0.3373,
+            0.2819,
+            0.2473,
+            0.1964
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.75437254,
+          "scores": [
+            0.7544,
+            0.6618,
+            0.5779,
+            0.5449,
+            0.4723,
+            0.3776
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3894885,
+          "scores": [
+            0.3895,
+            0.3846,
+            0.3561,
+            0.2307,
+            0.2219,
+            0.179
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9478,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10800066,
+          "scores": [
+            0.108
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1852092,
+          "scores": [
+            0.1852,
+            0.1172
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7841538,
+          "scores": [
+            0.7842,
+            0.7257,
+            0.6403,
+            0.5658,
+            0.5496,
+            0.427
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8468312,
+          "scores": [
+            0.8468,
+            0.7107,
+            0.5873,
+            0.3673,
+            0.3428,
+            0.2743
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.25423113,
+          "scores": [
+            0.2542,
+            0.2471,
+            0.191,
+            0.1839,
+            0.1777,
+            0.1176
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.8866,
+            0.8157,
+            0.7966,
+            0.7556,
+            0.7556
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.654674,
+          "scores": [
+            0.6547,
+            0.6215,
+            0.5895,
+            0.465,
+            0.2302,
+            0.2091
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 11,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6457,
+            0.4873,
+            0.4861,
+            0.4861,
+            0.4861
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 11,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.7467,
+            0.6723,
+            0.5989,
+            0.4531,
+            0.3279
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.92956835,
+          "scores": [
+            0.9296,
+            0.8445,
+            0.594,
+            0.4076,
+            0.3545,
+            0.201
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85403454,
+          "scores": [
+            0.854,
+            0.8228,
+            0.7248,
+            0.164,
+            0.1277,
+            0.1138
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.90448195,
+          "scores": [
+            0.9045,
+            0.7437,
+            0.6707,
+            0.6416,
+            0.6073,
+            0.5682
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238,
+            0.2974,
+            0.1225,
+            0.1223
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.4195,
+            0.2591
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 18,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8393393,
+          "scores": [
+            0.8393,
+            0.7303,
+            0.7132,
+            0.4971,
+            0.4524,
+            0.4501
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.72749174,
+          "scores": [
+            0.7275,
+            0.3757,
+            0.3344,
+            0.2313,
+            0.1472,
+            0.1289
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3348069,
+          "scores": [
+            0.3348,
+            0.1832,
+            0.1797,
+            0.1216
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.28656837,
+          "scores": [
+            0.2866,
+            0.1797,
+            0.1744,
+            0.156,
+            0.1539,
+            0.127
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.28836864,
+          "scores": [
+            0.2884,
+            0.1505,
+            0.1371,
+            0.1371,
+            0.1054
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 30,
+        "_vw": 0.5,
+        "_kw": 0.5
+      },
+      "label": "th=0.10 top_k=30  vw=0.5 kw=0.5",
+      "clause_hit": 27,
+      "clause_n": 34,
+      "title_only": 4,
+      "product_ok": 37,
+      "product_n": 42,
+      "noise": 18,
+      "avg_n": 6.46,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8003801,
+          "scores": [
+            0.8004,
+            0.7788,
+            0.7788,
+            0.5063,
+            0.4297,
+            0.3716
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1390453,
+          "scores": [
+            0.139
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8226,
+            0.7248,
+            0.1644,
+            0.1277,
+            0.114
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 6,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5901298,
+          "scores": [
+            0.5901,
+            0.5615,
+            0.3462,
+            0.3042,
+            0.2725,
+            0.2311
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.7322,
+            0.7206,
+            0.698,
+            0.6554,
+            0.4464
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.82233185,
+          "scores": [
+            0.8223,
+            0.6459,
+            0.1317,
+            0.111
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13128456,
+          "scores": [
+            0.1313,
+            0.1074
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8284,
+            0.4813,
+            0.3675,
+            0.3069,
+            0.2295
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.91117966,
+          "scores": [
+            0.9112,
+            0.7345,
+            0.6459,
+            0.6348,
+            0.6144,
+            0.3065
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.202,
+            0.1936,
+            0.1059
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 14,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.70750576,
+          "scores": [
+            0.7075,
+            0.6509,
+            0.6458,
+            0.3585,
+            0.2162,
+            0.2048
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.31997076,
+          "scores": [
+            0.32,
+            0.1901,
+            0.1833,
+            0.157,
+            0.157,
+            0.157
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7592254,
+          "scores": [
+            0.7592,
+            0.4245,
+            0.2804,
+            0.1981,
+            0.1604,
+            0.1353
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5236031,
+          "scores": [
+            0.5236,
+            0.3608,
+            0.306,
+            0.2411,
+            0.2239,
+            0.1719
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.26057756,
+          "scores": [
+            0.2606,
+            0.2031,
+            0.177,
+            0.1641,
+            0.1624,
+            0.1472
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8284,
+            0.4807,
+            0.3675,
+            0.3069,
+            0.2294
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3526475,
+          "scores": [
+            0.3526,
+            0.2208,
+            0.1854,
+            0.1341,
+            0.1287,
+            0.1041
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24220563,
+          "scores": [
+            0.2422,
+            0.1507
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1435475,
+          "scores": [
+            0.1435
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1999321,
+          "scores": [
+            0.1999,
+            0.1295
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.409,
+            0.404,
+            0.3508,
+            0.2473,
+            0.1746
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.2666436,
+          "scores": [
+            0.2666,
+            0.1865,
+            0.16
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 16,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.49108985,
+          "scores": [
+            0.4911,
+            0.4189,
+            0.4186,
+            0.3987,
+            0.3952,
+            0.3354
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 12,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3918131,
+          "scores": [
+            0.3918,
+            0.3469,
+            0.3373,
+            0.2819,
+            0.2473,
+            0.1964
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.75437254,
+          "scores": [
+            0.7544,
+            0.6598,
+            0.5762,
+            0.5449,
+            0.4722,
+            0.3776
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.38966265,
+          "scores": [
+            0.3897,
+            0.3841,
+            0.3561,
+            0.2307,
+            0.2219,
+            0.179
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.98262435,
+          "scores": [
+            0.9826,
+            0.9478,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10762492,
+          "scores": [
+            0.1076
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.18550412,
+          "scores": [
+            0.1855,
+            0.1172
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.78481424,
+          "scores": [
+            0.7848,
+            0.7256,
+            0.64,
+            0.5658,
+            0.5497,
+            0.4273
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8468312,
+          "scores": [
+            0.8468,
+            0.7107,
+            0.5878,
+            0.3673,
+            0.3428,
+            0.2743
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.25423113,
+          "scores": [
+            0.2542,
+            0.2471,
+            0.191,
+            0.1839,
+            0.1777,
+            0.1176
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9524858,
+          "scores": [
+            0.9525,
+            0.8868,
+            0.8157,
+            0.7966,
+            0.7556,
+            0.7556
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.65423226,
+          "scores": [
+            0.6542,
+            0.6213,
+            0.5895,
+            0.465,
+            0.2301,
+            0.2091
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 11,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6455,
+            0.4873,
+            0.4861,
+            0.4861,
+            0.4847
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 11,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.7467,
+            0.6723,
+            0.5987,
+            0.4538,
+            0.3286
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.92956835,
+          "scores": [
+            0.9296,
+            0.8444,
+            0.5936,
+            0.4076,
+            0.3545,
+            0.2009
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8228,
+            0.7248,
+            0.1649,
+            0.1277,
+            0.114
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9046505,
+          "scores": [
+            0.9047,
+            0.7437,
+            0.6707,
+            0.6414,
+            0.6075,
+            0.5676
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238,
+            0.2977,
+            0.1223,
+            0.1222
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.4199,
+            0.2591
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 18,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8392076,
+          "scores": [
+            0.8392,
+            0.7304,
+            0.713,
+            0.4968,
+            0.4518,
+            0.4492
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.72749174,
+          "scores": [
+            0.7275,
+            0.3762,
+            0.335,
+            0.2313,
+            0.1472,
+            0.1289
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.335242,
+          "scores": [
+            0.3352,
+            0.1832,
+            0.1797,
+            0.1216
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.2860695,
+          "scores": [
+            0.2861,
+            0.1792,
+            0.1744,
+            0.156,
+            0.1543,
+            0.1267
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.28826845,
+          "scores": [
+            0.2883,
+            0.1505,
+            0.1371,
+            0.1371,
+            0.1054
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 30,
+        "_vw": 0.6,
+        "_kw": 0.4
+      },
+      "label": "th=0.10 top_k=30  vw=0.6 kw=0.4",
+      "clause_hit": 27,
+      "clause_n": 34,
+      "title_only": 4,
+      "product_ok": 37,
+      "product_n": 42,
+      "noise": 18,
+      "avg_n": 6.46,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8003801,
+          "scores": [
+            0.8004,
+            0.7786,
+            0.7785,
+            0.5063,
+            0.4297,
+            0.3716
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13892843,
+          "scores": [
+            0.1389
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8225,
+            0.7259,
+            0.1649,
+            0.1277,
+            0.114
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 6,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5901298,
+          "scores": [
+            0.5901,
+            0.5615,
+            0.3464,
+            0.3042,
+            0.2725,
+            0.2311
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.732,
+            0.7203,
+            0.698,
+            0.6554,
+            0.4467
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8224745,
+          "scores": [
+            0.8225,
+            0.6461,
+            0.1311,
+            0.1112
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13128456,
+          "scores": [
+            0.1313,
+            0.1074
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4807,
+            0.3675,
+            0.3063,
+            0.2294
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.91117966,
+          "scores": [
+            0.9112,
+            0.7345,
+            0.6459,
+            0.6347,
+            0.6149,
+            0.3065
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.202,
+            0.1936,
+            0.1059
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 14,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.70811164,
+          "scores": [
+            0.7081,
+            0.6511,
+            0.6461,
+            0.3593,
+            0.2162,
+            0.2048
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3198645,
+          "scores": [
+            0.3199,
+            0.1904,
+            0.1833,
+            0.1573,
+            0.1573,
+            0.157
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7595823,
+          "scores": [
+            0.7596,
+            0.4247,
+            0.2804,
+            0.1981,
+            0.1607,
+            0.1355
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.523192,
+          "scores": [
+            0.5232,
+            0.3595,
+            0.3056,
+            0.2401,
+            0.2244,
+            0.1719
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.26057756,
+          "scores": [
+            0.2606,
+            0.2031,
+            0.177,
+            0.1641,
+            0.1622,
+            0.1477
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4807,
+            0.3669,
+            0.3069,
+            0.2294
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3526475,
+          "scores": [
+            0.3526,
+            0.2214,
+            0.1852,
+            0.1341,
+            0.1287,
+            0.1041
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24148938,
+          "scores": [
+            0.2415,
+            0.1512
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.14330755,
+          "scores": [
+            0.1433
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.19961986,
+          "scores": [
+            0.1996,
+            0.1293
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.4082,
+            0.4045,
+            0.3512,
+            0.2469,
+            0.175
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.2666436,
+          "scores": [
+            0.2666,
+            0.1865,
+            0.16
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 16,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.49105167,
+          "scores": [
+            0.4911,
+            0.4186,
+            0.4186,
+            0.3992,
+            0.3952,
+            0.3349
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 12,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3918131,
+          "scores": [
+            0.3918,
+            0.3469,
+            0.3373,
+            0.2819,
+            0.2474,
+            0.1967
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.75437254,
+          "scores": [
+            0.7544,
+            0.6598,
+            0.5779,
+            0.5449,
+            0.4722,
+            0.3778
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.38966265,
+          "scores": [
+            0.3897,
+            0.3841,
+            0.3561,
+            0.2307,
+            0.2219,
+            0.179
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9478,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10762492,
+          "scores": [
+            0.1076
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1852092,
+          "scores": [
+            0.1852,
+            0.1172
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7841538,
+          "scores": [
+            0.7842,
+            0.7257,
+            0.6403,
+            0.5658,
+            0.5496,
+            0.427
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8465777,
+          "scores": [
+            0.8466,
+            0.7115,
+            0.5868,
+            0.3672,
+            0.3428,
+            0.2743
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.25423113,
+          "scores": [
+            0.2542,
+            0.2465,
+            0.191,
+            0.1839,
+            0.1777,
+            0.1176
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.8868,
+            0.8157,
+            0.7966,
+            0.7556,
+            0.7556
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6547844,
+          "scores": [
+            0.6548,
+            0.6209,
+            0.589,
+            0.4662,
+            0.2302,
+            0.2095
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 11,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6452,
+            0.4869,
+            0.4861,
+            0.4845,
+            0.4845
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 11,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.7467,
+            0.6721,
+            0.5988,
+            0.4533,
+            0.3279
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.92956835,
+          "scores": [
+            0.9296,
+            0.8445,
+            0.5936,
+            0.4076,
+            0.3545,
+            0.201
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8225,
+            0.7248,
+            0.1649,
+            0.1277,
+            0.114
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.90448195,
+          "scores": [
+            0.9045,
+            0.7439,
+            0.6707,
+            0.6416,
+            0.6073,
+            0.5682
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238,
+            0.2977,
+            0.1225,
+            0.1223
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.4199,
+            0.2591
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 18,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8393393,
+          "scores": [
+            0.8393,
+            0.7304,
+            0.7131,
+            0.497,
+            0.4524,
+            0.4499
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.72749174,
+          "scores": [
+            0.7275,
+            0.3757,
+            0.3344,
+            0.2316,
+            0.1473,
+            0.1287
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3348069,
+          "scores": [
+            0.3348,
+            0.1832,
+            0.1797,
+            0.1216
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.2860695,
+          "scores": [
+            0.2861,
+            0.1792,
+            0.1744,
+            0.1556,
+            0.1543,
+            0.1267
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.28897023,
+          "scores": [
+            0.289,
+            0.151,
+            0.1372,
+            0.1372,
+            0.1056
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 30,
+        "_vw": 0.8,
+        "_kw": 0.2
+      },
+      "label": "th=0.10 top_k=30  vw=0.8 kw=0.2",
+      "clause_hit": 27,
+      "clause_n": 34,
+      "title_only": 4,
+      "product_ok": 37,
+      "product_n": 42,
+      "noise": 18,
+      "avg_n": 6.46,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8003801,
+          "scores": [
+            0.8004,
+            0.7788,
+            0.7788,
+            0.5063,
+            0.4297,
+            0.3716
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13927926,
+          "scores": [
+            0.1393
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8228,
+            0.7251,
+            0.1649,
+            0.1275,
+            0.1138
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 6,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5898936,
+          "scores": [
+            0.5899,
+            0.561,
+            0.3462,
+            0.3038,
+            0.2726,
+            0.2311
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.732,
+            0.7203,
+            0.698,
+            0.6554,
+            0.4467
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8224745,
+          "scores": [
+            0.8225,
+            0.6461,
+            0.1311,
+            0.1112
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13128456,
+          "scores": [
+            0.1313,
+            0.1074
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4807,
+            0.3675,
+            0.3069,
+            0.2294
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9113377,
+          "scores": [
+            0.9113,
+            0.7345,
+            0.6461,
+            0.6348,
+            0.6143,
+            0.3059
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.202,
+            0.1936,
+            0.1061
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 14,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.70750576,
+          "scores": [
+            0.7075,
+            0.6507,
+            0.6458,
+            0.3588,
+            0.2162,
+            0.2048
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3198645,
+          "scores": [
+            0.3199,
+            0.1904,
+            0.1833,
+            0.157,
+            0.157,
+            0.157
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7595823,
+          "scores": [
+            0.7596,
+            0.4247,
+            0.2804,
+            0.1981,
+            0.1604,
+            0.1355
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.523192,
+          "scores": [
+            0.5232,
+            0.3603,
+            0.3064,
+            0.2402,
+            0.2239,
+            0.1725
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.26057756,
+          "scores": [
+            0.2606,
+            0.2034,
+            0.177,
+            0.1641,
+            0.1626,
+            0.1471
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4807,
+            0.3675,
+            0.3069,
+            0.2295
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3526475,
+          "scores": [
+            0.3526,
+            0.2214,
+            0.1854,
+            0.1341,
+            0.1287,
+            0.1041
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24148938,
+          "scores": [
+            0.2415,
+            0.1512
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1435475,
+          "scores": [
+            0.1435
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.19961986,
+          "scores": [
+            0.1996,
+            0.1293
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.409,
+            0.404,
+            0.3508,
+            0.2473,
+            0.1746
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.2666436,
+          "scores": [
+            0.2666,
+            0.1865,
+            0.16
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 16,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.4911127,
+          "scores": [
+            0.4911,
+            0.4186,
+            0.4186,
+            0.3992,
+            0.3952,
+            0.3349
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 12,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3918131,
+          "scores": [
+            0.3918,
+            0.3469,
+            0.3373,
+            0.2819,
+            0.2474,
+            0.1964
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.75437254,
+          "scores": [
+            0.7544,
+            0.6598,
+            0.5762,
+            0.5449,
+            0.4722,
+            0.3764
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.38966265,
+          "scores": [
+            0.3897,
+            0.384,
+            0.3561,
+            0.2307,
+            0.2219,
+            0.179
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9478,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10762492,
+          "scores": [
+            0.1076
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1852092,
+          "scores": [
+            0.1852,
+            0.1172
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7841538,
+          "scores": [
+            0.7842,
+            0.7257,
+            0.6395,
+            0.5658,
+            0.5483,
+            0.4269
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8465777,
+          "scores": [
+            0.8466,
+            0.7107,
+            0.5873,
+            0.3673,
+            0.3428,
+            0.2743
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.25404602,
+          "scores": [
+            0.254,
+            0.2471,
+            0.1918,
+            0.1836,
+            0.1777,
+            0.1172
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.8868,
+            0.8157,
+            0.7966,
+            0.7556,
+            0.7556
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.65423226,
+          "scores": [
+            0.6542,
+            0.6209,
+            0.5895,
+            0.4662,
+            0.2302,
+            0.2091
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 11,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6455,
+            0.4869,
+            0.4845,
+            0.4845,
+            0.4845
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 11,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.7467,
+            0.6721,
+            0.5988,
+            0.454,
+            0.3279
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.92956835,
+          "scores": [
+            0.9296,
+            0.8445,
+            0.594,
+            0.4076,
+            0.3545,
+            0.2009
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85415626,
+          "scores": [
+            0.8542,
+            0.8228,
+            0.7248,
+            0.164,
+            0.1277,
+            0.1138
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9046505,
+          "scores": [
+            0.9047,
+            0.7439,
+            0.6707,
+            0.6416,
+            0.608,
+            0.5676
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238,
+            0.2974,
+            0.1225,
+            0.1223
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.4195,
+            0.2591
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 18,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8392076,
+          "scores": [
+            0.8392,
+            0.7304,
+            0.7131,
+            0.4968,
+            0.4524,
+            0.4499
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7272981,
+          "scores": [
+            0.7273,
+            0.3757,
+            0.3352,
+            0.2316,
+            0.1473,
+            0.1287
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3348069,
+          "scores": [
+            0.3348,
+            0.1832,
+            0.1797,
+            0.1216
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.28656837,
+          "scores": [
+            0.2866,
+            0.1792,
+            0.1744,
+            0.1557,
+            0.1543,
+            0.1267
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.28826845,
+          "scores": [
+            0.2883,
+            0.1505,
+            0.1371,
+            0.1371,
+            0.1054
+          ]
+        }
+      ]
+    },
+    {
+      "config": {
+        "score_threshold": 0.1,
+        "top_k": 30,
+        "_vw": 1.0,
+        "_kw": 0.0
+      },
+      "label": "th=0.10 top_k=30  vw=1.0 kw=0.0",
+      "clause_hit": 27,
+      "clause_n": 34,
+      "title_only": 4,
+      "product_ok": 37,
+      "product_n": 42,
+      "noise": 18,
+      "avg_n": 6.46,
+      "refuse_with_cites": 6,
+      "refuse_n": 10,
+      "rows": [
+        {
+          "id": "M-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8003801,
+          "scores": [
+            0.8004,
+            0.7788,
+            0.7788,
+            0.5069,
+            0.4301,
+            0.3716
+          ]
+        },
+        {
+          "id": "M-02",
+          "error": null,
+          "n": 1,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.13892843,
+          "scores": [
+            0.1389
+          ]
+        },
+        {
+          "id": "M-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85403454,
+          "scores": [
+            0.854,
+            0.8225,
+            0.7248,
+            0.1644,
+            0.1275,
+            0.114
+          ]
+        },
+        {
+          "id": "M-04",
+          "error": null,
+          "n": 6,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.5901298,
+          "scores": [
+            0.5901,
+            0.5621,
+            0.3464,
+            0.3042,
+            0.2725,
+            0.2311
+          ]
+        },
+        {
+          "id": "M-05",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95861524,
+          "scores": [
+            0.9586,
+            0.732,
+            0.7203,
+            0.698,
+            0.6556,
+            0.4464
+          ]
+        },
+        {
+          "id": "M-06",
+          "error": null,
+          "n": 4,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.82233185,
+          "scores": [
+            0.8223,
+            0.6459,
+            0.1311,
+            0.111
+          ]
+        },
+        {
+          "id": "M-07",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1309508,
+          "scores": [
+            0.131,
+            0.1076
+          ]
+        },
+        {
+          "id": "M-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4809,
+            0.3675,
+            0.3069,
+            0.2294
+          ]
+        },
+        {
+          "id": "C-01",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.91117966,
+          "scores": [
+            0.9112,
+            0.7345,
+            0.6459,
+            0.6348,
+            0.6144,
+            0.3065
+          ]
+        },
+        {
+          "id": "C-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 3,
+          "top_score": 0.9403531,
+          "scores": [
+            0.9404,
+            0.8816,
+            0.202,
+            0.1935,
+            0.1061
+          ]
+        },
+        {
+          "id": "C-03",
+          "error": null,
+          "n": 14,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.70750576,
+          "scores": [
+            0.7075,
+            0.6507,
+            0.6458,
+            0.3588,
+            0.2162,
+            0.2048
+          ]
+        },
+        {
+          "id": "C-04",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.32018328,
+          "scores": [
+            0.3202,
+            0.1904,
+            0.1833,
+            0.157,
+            0.157,
+            0.157
+          ]
+        },
+        {
+          "id": "C-05",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7595823,
+          "scores": [
+            0.7596,
+            0.4247,
+            0.2804,
+            0.1981,
+            0.1604,
+            0.1355
+          ]
+        },
+        {
+          "id": "C-06",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.523192,
+          "scores": [
+            0.5232,
+            0.3603,
+            0.3061,
+            0.2411,
+            0.2239,
+            0.1725
+          ]
+        },
+        {
+          "id": "C-07",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.26057756,
+          "scores": [
+            0.2606,
+            0.2034,
+            0.177,
+            0.1641,
+            0.1626,
+            0.1472
+          ]
+        },
+        {
+          "id": "C-08",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9076402,
+          "scores": [
+            0.9076,
+            0.8282,
+            0.4807,
+            0.3669,
+            0.3063,
+            0.229
+          ]
+        },
+        {
+          "id": "X-01",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.35320508,
+          "scores": [
+            0.3532,
+            0.2214,
+            0.1852,
+            0.1341,
+            0.1285,
+            0.1041
+          ]
+        },
+        {
+          "id": "X-02",
+          "error": null,
+          "n": 2,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.24220563,
+          "scores": [
+            0.2422,
+            0.1512
+          ]
+        },
+        {
+          "id": "O-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-02",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-03",
+          "error": null,
+          "n": 3,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.16981852,
+          "scores": [
+            0.1698,
+            0.1698,
+            0.1396
+          ]
+        },
+        {
+          "id": "O-04",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "O-05",
+          "error": null,
+          "n": 1,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.14330755,
+          "scores": [
+            0.1433
+          ]
+        },
+        {
+          "id": "M-09",
+          "error": null,
+          "n": 2,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.19961986,
+          "scores": [
+            0.1996,
+            0.1293
+          ]
+        },
+        {
+          "id": "M-10",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.58118427,
+          "scores": [
+            0.5812,
+            0.4082,
+            0.4045,
+            0.3512,
+            0.2469,
+            0.175
+          ]
+        },
+        {
+          "id": "M-11",
+          "error": null,
+          "n": 3,
+          "clause_hit": false,
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.2666436,
+          "scores": [
+            0.2666,
+            0.1871,
+            0.16
+          ]
+        },
+        {
+          "id": "M-12",
+          "error": null,
+          "n": 16,
+          "clause_hit": "title_only",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.4911127,
+          "scores": [
+            0.4911,
+            0.4174,
+            0.4174,
+            0.3992,
+            0.3954,
+            0.3349
+          ]
+        },
+        {
+          "id": "M-13",
+          "error": null,
+          "n": 12,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3915804,
+          "scores": [
+            0.3916,
+            0.3469,
+            0.3373,
+            0.2819,
+            0.2473,
+            0.1964
+          ]
+        },
+        {
+          "id": "M-14",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.75437254,
+          "scores": [
+            0.7544,
+            0.6618,
+            0.5777,
+            0.5449,
+            0.4722,
+            0.3764
+          ]
+        },
+        {
+          "id": "M-15",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.38966265,
+          "scores": [
+            0.3897,
+            0.3841,
+            0.3559,
+            0.2307,
+            0.2219,
+            0.179
+          ]
+        },
+        {
+          "id": "G-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": false,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "G-02",
+          "error": null,
+          "n": 3,
+          "clause_hit": "title_only",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9825575,
+          "scores": [
+            0.9826,
+            0.9479,
+            0.9225
+          ]
+        },
+        {
+          "id": "G-03",
+          "error": null,
+          "n": 1,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.10762492,
+          "scores": [
+            0.1076
+          ]
+        },
+        {
+          "id": "G-04",
+          "error": null,
+          "n": 2,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.1852092,
+          "scores": [
+            0.1852,
+            0.1172
+          ]
+        },
+        {
+          "id": "G-05",
+          "error": null,
+          "n": 10,
+          "clause_hit": "exact",
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.783823,
+          "scores": [
+            0.7838,
+            0.7256,
+            0.6403,
+            0.5661,
+            0.5496,
+            0.4273
+          ]
+        },
+        {
+          "id": "C-09",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.8468312,
+          "scores": [
+            0.8468,
+            0.7107,
+            0.5873,
+            0.3674,
+            0.3428,
+            0.2743
+          ]
+        },
+        {
+          "id": "C-10",
+          "error": null,
+          "n": 9,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.25404602,
+          "scores": [
+            0.254,
+            0.2471,
+            0.1918,
+            0.1836,
+            0.1777,
+            0.1172
+          ]
+        },
+        {
+          "id": "C-11",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.95257413,
+          "scores": [
+            0.9526,
+            0.8866,
+            0.8157,
+            0.7966,
+            0.7551,
+            0.7551
+          ]
+        },
+        {
+          "id": "C-12",
+          "error": null,
+          "n": 8,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.65423226,
+          "scores": [
+            0.6542,
+            0.6209,
+            0.5895,
+            0.4662,
+            0.2302,
+            0.2091
+          ]
+        },
+        {
+          "id": "C-13",
+          "error": null,
+          "n": 11,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.99227446,
+          "scores": [
+            0.9923,
+            0.6455,
+            0.4869,
+            0.4845,
+            0.4845,
+            0.4845
+          ]
+        },
+        {
+          "id": "A-01",
+          "error": null,
+          "n": 11,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.9401336,
+          "scores": [
+            0.9401,
+            0.7467,
+            0.6727,
+            0.5989,
+            0.4542,
+            0.3279
+          ]
+        },
+        {
+          "id": "A-02",
+          "error": null,
+          "n": 8,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.9298237,
+          "scores": [
+            0.9298,
+            0.8444,
+            0.594,
+            0.4076,
+            0.3545,
+            0.2009
+          ]
+        },
+        {
+          "id": "A-03",
+          "error": null,
+          "n": 6,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.85403454,
+          "scores": [
+            0.854,
+            0.8228,
+            0.7254,
+            0.164,
+            0.1277,
+            0.1138
+          ]
+        },
+        {
+          "id": "P-01",
+          "error": null,
+          "n": 13,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.9046505,
+          "scores": [
+            0.9047,
+            0.7439,
+            0.6707,
+            0.6416,
+            0.6075,
+            0.5676
+          ]
+        },
+        {
+          "id": "P-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.6131208,
+          "scores": [
+            0.6131,
+            0.4238,
+            0.2977,
+            0.1225,
+            0.1223
+          ]
+        },
+        {
+          "id": "S-01",
+          "error": null,
+          "n": 3,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.5069995,
+          "scores": [
+            0.507,
+            0.4199,
+            0.2593
+          ]
+        },
+        {
+          "id": "S-02",
+          "error": null,
+          "n": 18,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.8392076,
+          "scores": [
+            0.8392,
+            0.7304,
+            0.7131,
+            0.497,
+            0.4524,
+            0.4499
+          ]
+        },
+        {
+          "id": "O-06",
+          "error": null,
+          "n": 7,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.7276853,
+          "scores": [
+            0.7277,
+            0.3762,
+            0.335,
+            0.2313,
+            0.1471,
+            0.1289
+          ]
+        },
+        {
+          "id": "O-07",
+          "error": null,
+          "n": 4,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 0,
+          "top_score": 0.3348069,
+          "scores": [
+            0.3348,
+            0.1832,
+            0.1797,
+            0.1216
+          ]
+        },
+        {
+          "id": "O-08",
+          "error": null,
+          "n": 6,
+          "clause_hit": "exact",
+          "product_ok": true,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 1,
+          "top_score": 0.2860695,
+          "scores": [
+            0.2861,
+            0.1798,
+            0.1744,
+            0.156,
+            0.1539,
+            0.127
+          ]
+        },
+        {
+          "id": "F-01",
+          "error": null,
+          "n": 0,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [],
+          "toc_noise": 0,
+          "top_score": 0.0,
+          "scores": []
+        },
+        {
+          "id": "F-02",
+          "error": null,
+          "n": 5,
+          "clause_hit": null,
+          "product_ok": false,
+          "cited_products": [
+            "ci",
+            "med_ind"
+          ],
+          "toc_noise": 2,
+          "top_score": 0.28897023,
+          "scores": [
+            0.289,
+            0.1505,
+            0.1372,
+            0.1372,
+            0.1054
+          ]
+        }
+      ]
+    }
+  ]
+}
