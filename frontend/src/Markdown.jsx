@@ -54,7 +54,11 @@ function renderInline(text, key) {
 
 const RE_OL = /^(\s*)(\d{1,3})[.)]\s+(.*)$/
 const RE_UL = /^(\s*)[-*+]\s+(.*)$/
-const RE_H = /^(#{1,6})\s+(.*)$/
+// 标题的 `#` 与正文之间允许**零个或多个**空格。严格按 CommonMark 应该要求至少一个
+// （`#标题` 不算标题），但模型输出的 markdown 常被上游的分帧/转义吃掉分隔空格，
+// 变成 `###一、责任免除情形`——按严格规则会整段退化成普通文本，页面上直接看到
+// 字面的 `###`。宁可多渲染成标题，也不要把标记原样甩给用户。
+const RE_H = /^(#{1,6})\s*(.*)$/
 const RE_QUOTE = /^\s*>\s?(.*)$/
 const RE_HR = /^\s*(?:-{3,}|\*{3,}|_{3,})\s*$/
 const RE_FENCE = /^\s*```(.*)$/
@@ -87,7 +91,8 @@ function parseBlocks(src) {
     if (RE_HR.test(line)) { blocks.push({ t: 'hr' }); i++; continue }
 
     const h = RE_H.exec(line)
-    if (h) { blocks.push({ t: 'h', level: h[1].length, text: h[2] }); i++; continue }
+    // h[2] 非空才认：否则会把空标题或 `#`-only 的行也吃成标题块
+    if (h && h[2].trim()) { blocks.push({ t: 'h', level: h[1].length, text: h[2] }); i++; continue }
 
     if (RE_QUOTE.test(line)) {
       const buf = []

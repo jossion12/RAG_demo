@@ -27,7 +27,18 @@ async function streamChat(question, { onDelta, onCitations, onDone, onError, sig
   let event = ''
 
   const handle = (payload) => {
-    if (event === 'delta') onDelta?.(payload)
+    if (event === 'delta') {
+      // delta 的 payload 现在是 JSON 字符串（见 ChatService#sendDelta 的注释）：
+      // 直接把文本塞进 SSE 的 data 行，会让「以空格开头的帧」被客户端按规范
+      // 剥掉分隔空格，markdown 的 `### 一、` 就变成 `###一、`，标题退化。
+      // 解析失败时退回原样，保证后端未升级时也不白屏。
+      let text = payload
+      try {
+        const v = JSON.parse(payload)
+        text = typeof v === 'string' ? v : payload
+      } catch { /* 后端未升级：按旧的裸文本处理 */ }
+      onDelta?.(text)
+    }
     else if (event === 'citations') {
       try { onCitations?.(JSON.parse(payload)) } catch { /* 忽略非法 JSON */ }
     } else if (event === 'done' || event === 'blocked') {
@@ -99,7 +110,17 @@ export default function App() {
         onDelta: (t) => { patch((x) => ({ ...x, a: x.a + t })); scroll() },
         onCitations: (c) => patch((x) => ({ ...x, citations: c || [] })),
         onDone: (d) => {
-          patch((x) => ({ ...x, streaming: false, refused: !!d.refused, elapsed: d.elapsedMs, blocked: !!d.blocked }))
+          // 用定稿覆盖 delta 拼接结果。done.answer 是后端原样转发 Dify 的权威文本，
+          // 任何分帧/转义环节的损耗都在这里被抹平。流式过程中已经渲染对了，
+          // 覆盖不会闪；只有真的丢过字符时才会看到一次纠正。
+          patch((x) => ({
+            ...x,
+            streaming: false,
+            a: typeof d.answer === 'string' && d.answer ? d.answer : x.a,
+            refused: !!d.refused,
+            elapsed: d.elapsedMs,
+            blocked: !!d.blocked,
+          }))
           setBusy(false)
           abortRef.current = null
           scroll()

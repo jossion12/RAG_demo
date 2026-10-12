@@ -5,6 +5,31 @@ RAG 链路由 **Dify** 编排，本仓库的 Java 侧是**治理层**（BFF + �
 
 ---
 
+## 架构图
+
+图源在 `docs/archify/`（Archify 生成的可交互页面）。下面两张是静态快照，会跟随
+你的浅色 / 深色主题切换；想点节点看依赖、或导出演示动效，打开 HTML 交互版。
+
+### 整体架构
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/archify/architecture.visual-check.2048x1320.dark.png">
+  <img alt="整体架构：营销端提问 → 前端 → Java 治理层 → Dify ChatFlow；Ollama 与 TEI Rerank 在容器侧，H2/PostgreSQL 审计库旁挂" src="docs/archify/architecture.visual-check.2048x1320.light.png">
+</picture>
+
+交互版：[`docs/archify/architecture.html`](docs/archify/architecture.html)
+
+### 问答主链路
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/archify/chat-flow.visual-check.2048x1320.dark.png">
+  <img alt="问答主链路：前端交互 → 治理层 SSE 编排 → Dify ChatFlow 知识检索与 LLM 生成 → 审计与知识库；含入参过滤、合约拦截、引用组装" src="docs/archify/chat-flow.visual-check.2048x1320.light.png">
+</picture>
+
+交互版：[`docs/archify/chat-flow.html`](docs/archify/chat-flow.html)
+
+---
+
 ## 目录结构
 
 ```
@@ -29,6 +54,7 @@ RAG_demo/
 │   └── runs/<tag>/              每轮结果留档（raw.jsonl / report.md / summary.json）
 ├── data/source/                 已验证的条款 PDF + 清洗后文本
 ├── docs/                        需求文档 V1.2、实测报告、迭代报告、启动手册
+│   └── archify/                 架构图源文件（可交互 HTML + 浅/深色快照 PNG）
 └── scripts/
     ├── dify_params.py           Dify 参数读写 + 快照/回滚（node. 前缀区分作用域）
     ├── sweep_retrieval.py       参数扫描（只检索不调 LLM，一组 8 秒）

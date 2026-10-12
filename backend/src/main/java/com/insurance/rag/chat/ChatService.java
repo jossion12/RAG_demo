@@ -75,7 +75,7 @@ public class ChatService {
                         chunk -> {
                             if (chunk instanceof DifyClient.ChatChunk.Delta d) {
                                 answer.append(d.text());
-                                send(emitter, "delta", d.text());
+                                sendDelta(emitter, d.text());
                             } else if (chunk instanceof DifyClient.ChatChunk.Finished f) {
                                 finish(requestId, question, answer.toString(), f.result(), in, emitter);
                             } else if (chunk instanceof DifyClient.ChatChunk.Failed x) {
@@ -203,12 +203,39 @@ public class ChatService {
                                Long elapsedMs, List<String> blockedBy) {
     }
 
+    /**
+     * 推一帧 SSE。
+     *
+     * <p>为什么 delta 要包一层 JSON：SSE 的 {@code data:} 行用「冒号 + 一个空格」分隔字段名和值，
+     * 客户端按规范会剥掉这**一个**空格。Spring 的 SseEmitter 对 String payload 也这么拼，
+     * 于是当模型某一帧恰好以空格开头（markdown 里极常见：{@code ### 一、} 的空格、
+     * 行首缩进），这个空格就被当成分隔符吃掉了，前端看到的是 {@code ###一、}。
+     * Markdown 渲染器的标题正则要求 {@code #} 与正文之间有空格，标题因此退化成普通段落——
+     * 这就是「答案里 ### 和 ** 原样显示」的根因。
+     *
+     * <p>实测证据（scripts/probe_delta_vs_done_space.py）：715 帧 delta 里 68 帧首字符是空格，
+     * delta 拼接结果比 done 定稿正好少 68 个字符，且差异**全是空格**。数字精确吻合。
+     *
+     * <p>改法：delta 改走 JSON 字符串包装，和 done/citations 一样。这样空格由 JSON 转义
+     * （前导空格会变成 {@code " x"} 里的字面空格）承载，不再与 SSE 分隔符混淆。
+     * 客户端在 JSON.parse 后拿到的就是原文。
+     */
     private void send(SseEmitter emitter, String event, Object payload) {
         try {
             emitter.send(SseEmitter.event().name(event).data(payload == null ? "" : payload));
         } catch (Exception e) {
             log.debug("SSE 推送失败（客户端可能已断开）: {}", e.toString());
         }
+    }
+
+    /**
+     * 推文本增量。用 JSON 字符串承载，避开 SSE 分隔空格与内容空格的歧义。
+     *
+     * <p>注意 {@code done} 事件里的 answer 走 JSON，本来就不受影响；
+     * 两条路径现在对「空格」的处理一致，delta 拼接结果与定稿逐字相同。
+     */
+    private void sendDelta(SseEmitter emitter, String text) {
+        send(emitter, "delta", json(text == null ? "" : text));
     }
 
     /** 会话历史（FR-07）。 */
