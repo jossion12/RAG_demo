@@ -59,7 +59,15 @@ RAG_demo/
     ├── dify_params.py           Dify 参数读写 + 快照/回滚（node. 前缀区分作用域）
     ├── sweep_retrieval.py       参数扫描（只检索不调 LLM，一组 8 秒）
     ├── reset_dify_password.py   Dify 密码重置（你写的）
-    └── verify_governance.py     治理层端到端验证（13 项断言）
+    ├── verify_governance.py     治理层端到端验证（13 项断言）
+    └── 知识库清理管线（§9，可复现，勿当临时脚本删）
+        ├── strip_toc_pages.py           裁掉封面/阅读指引/条款目录页
+        ├── verify_no_body_loss.py       证明只删了目录、正文一字未少
+        ├── reingest_kb.py               用裁剪版替换 Dify 知识库
+        ├── verify_toc_gone.py           检索层验证目录噪声归零
+        ├── recheck_toc_on_r004.py       核对目录噪声判据口径
+        ├── probe_delta_vs_done_space.py SSE 空格守门（修复后逐字相同）
+        └── verify_markdown_fixed.py     markdown 标记守门
 ```
 
 ---
@@ -74,7 +82,7 @@ RAG_demo/
 # 首次先打包
 cd backend
 $env:JAVA_HOME="C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot"
-$env:Path="$env:JAVA_HOME\bin;D:\tool\maven\apache-maven-3.9.9\bin;$env:Path"
+$env:Path="$env:JAVA_HOME\bin;D:\tools\apache-maven-3.9.16\bin;$env:Path"
 mvn -DskipTests package
 
 # 启动（脚本会等待端口就绪并打印 PID，实测 ~13 秒）
@@ -97,6 +105,8 @@ powershell -ExecutionPolicy Bypass -File scripts\start-backend.ps1
 | `Start-Process -RedirectStandard*` | java 继承 PowerShell 管道句柄，脚本退不出被超时杀 | 不重定向，日志交给 Spring 自己写（`logging.file.name`） |
 | CIM/WMI 进程工作目录是 `C:\Windows\System32` | H2 相对路径落到 System32：`Error while creating file ""C:/Windows/System32/data""` | 用 `-Dapp.data.dir=<绝对路径>`（`-D` 在 `-jar` 前，不含分号，不会被 cmd 引号规则吃掉） |
 | 反引号续行符 | 续行静默失效，`-ArgumentList` 被当成独立命令 | 参数用数组传，不用续行符 |
+| **jar 正被运行中的 java 进程加载** | `mvn package` 在 `spring-boot:repackage` 阶段报 `Unable to rename ...jar`；更糟的是它**已先用 jar 插件写了一个瘦 jar 覆盖掉 fat jar**，产物直接不可执行 | 打包前先 `scripts\stop-backend.ps1`。「repackage 失败」别当成 jar 损坏去排查 |
+| **`mvn` / `python` 不在 PATH** | 直接敲 `mvn` 或 `python` 报「不是内部或外部命令」 | 本机 Maven 用绝对路径 `D:\tools\apache-maven-3.9.16\bin\mvn.cmd`；Python 是 `C:\Python312\python.exe`，无 venv |
 
 默认用 H2 文件库（`backend/data/`），**不需要起数据库容器**即可跑通全流程。
 切 PostgreSQL 只需改 `application.yml` 的 datasource 三行。
@@ -150,10 +160,14 @@ npm run dev        # http://localhost:5173，已配 /api 代理到 8080
 
 ⚠️ 应用是 **Chatflow**，API 端点 `/v1/chatflow/chat-messages`。
 
-🔴 **目前只有一个知识库，三份条款混在一起**，检索前没有产品约束——
+🔴 **目前只有一个知识库，多份条款混在一起**，检索前没有产品约束——
 这是跨产品串档（4/42）和同名章节错配（3/42）的根因。
 拆双知识库 + 问题分类器路由是下一阶段的首要任务。
 在拆库之前，**产品维度的准确率没有解**。
+
+> 📌 当前知识库**实入 2 份**（个人住院医疗 / 重疾E，均已剔除目录页）。
+> 团体百万医疗在 `data/source/` 有 PDF 但未入库——评测里 G-01~G-05 五条团体题
+> 因此必然失败。补录它会改变评测口径，需单独一轮基准。
 
 ---
 
@@ -200,21 +214,46 @@ npm run dev        # http://localhost:5173，已配 /api 代理到 8080
 
 命中入选后，再用全量评测验证。⚠️ **改阈值必须改节点级**——见 `docs/项目启动手册.md` §6.5。
 
+### 知识库清理（剔除目录/封面页）
+
+条款 PDF 的封面、阅读指引、条款目录对「犹豫期/等待期」这类词面命中极高，
+会把正文条款挤出候选。这是**数据侧问题**，调参救不了（`docs/评测迭代报告.md` §5.1）。
+管线可复现，按顺序跑：
+
+```powershell
+& "C:\Python312\python.exe" scripts\strip_toc_pages.py --apply   # 裁页 -> data/source/noc/
+& "C:\Python312\python.exe" scripts\verify_no_body_loss.py       # 断言：裁剪版是原文严格后缀
+& "C:\Python312\python.exe" scripts\reingest_kb.py --apply       # 删旧文档 + 传裁剪版 + 等索引
+& "C:\Python312\python.exe" scripts\verify_toc_gone.py           # 检索层验证噪声归零
+```
+
+`reingest_kb.py` 默认**只替换知识库里已有的文档**，不擅自补录新文档——
+补录会改变评测口径。`eval/runs/kb_doc_swap.json` 留了换档记录，可按 id 手工回滚。
+
 ### 验收线与当前实测
 
-| 指标 | 验收线 | 当前实测 |
-| --- | --- | --- |
-| 应答类命中率 | ≥85% | 48% ❌ |
-| 拒答类正确率 | ≥85% | 90% ✅ |
-| 跨产品题 | ≥90% | 50% ❌ |
-| 口语问法 | ≥75% | 36% ❌ |
-| 引用命中率 | ≥90% | 65% ❌ |
+| 指标 | 验收线 | r004 实测（参数天花板） | r005 实测（已剔目录页） |
+| --- | --- | --- | --- |
+| 应答类命中率 | ≥85% | 48% ❌ | 38% ❌ |
+| 拒答类正确率 | ≥85% | 90% ✅ | 90% ✅ |
+| 跨产品题 | ≥90% | 50% ❌ | 25% ❌ |
+| 口语问法 | ≥75% | 36% ❌ | 29% ❌ |
+| 引用命中率 | ≥90% | 65% ❌ | 38% ❌ |
+| 目录页噪声（诊断项） | — | 11/52 | **0/52** ✅ |
+
+⚠️ **两列不可直接相减。** r005 在剔除目录页的同时出现了**检索分数整体退化**
+（34/34 条首条分下降、零引用 6→18），已逐条排除裁到正文、索引异常、维度错配、
+rerank 故障等假设仍未定位。**r005 不是一次干净的对照实验**，它的通过数不反映
+「剔目录页」的收益。详见 `docs/评测迭代报告.md` §9.3–9.5。
 
 **剩余失败不是参数问题。** 42 条应答题里 4 条串档、3 条同名章节错配，
 根因是三份条款塞在**一个知识库、检索前没有产品约束**——
 按 `docs/链路实测发现报告.md` 的建议，下一步是拆双知识库 + 问题分类器路由。
 
-完整四轮迭代过程见 **`docs/评测迭代报告.md`**。
+完整五轮迭代过程见 **`docs/评测迭代报告.md`**。
+
+> 📌 另有 2 份已清洗 PDF 在 `data/source/`（含团体百万医疗）**尚未入库**，
+> 当前知识库实为 **2 份**。评测里 G-01~G-05 五条团体题因此必然失败。
 
 ---
 
@@ -237,12 +276,19 @@ npm run dev        # http://localhost:5173，已配 /api 代理到 8080
 5. **引用去重按 segmentId**：同一条片段可能被多条检索路径召回，
    不去重前端引用列表会出现重复项。
 
-6. **SSE 的 `data:` 后面没有空格，但客户端按规范剥掉了一个**：
-   Spring 写的是 `data:  **`（冒号后直接跟载荷），而 SSE 规范要求客户端
-   剥掉 `data:` 后的**一个**前导空格，于是**每个以空格开头的增量都会丢掉那个空格**。
-   实测 52 条里 38 条的流式拼接结果与最终答案对不上（`1. **X**` vs `1.  **X**`）。
-   中文里多数是观感问题，但**一旦某个增量块里有换行且换行后有实义内容，那部分会被静默吞掉**。
-   修法二选一：服务端保证 `data:` 后带空格，或客户端改成不剥。
+6. **delta 的文本曾整段被 SSE 分隔空格吃掉**（已修，留作记录）：
+   SSE 规范里 `data:` 冒号后那**一个**空格是分隔符，客户端按规范剥掉它。
+   Spring 的 `SseEmitter` 对 String payload 也这么拼，于是当模型某一帧恰好
+   **以空格开头**（markdown 里极常见：`### 一、` 的那个空格、行首缩进），
+   这个内容空格就被当成分隔符吞掉了。实测 715 帧 delta 里 68 帧首字符是空格，
+   delta 拼接结果比 `done.answer` **正好少 68 个字符，且全是空格**。
+
+   症状是页面把 markdown 标记原样显示（`###一、` 匹配不上标题正则、退化成普通段落）。
+   修法：delta 改用 **JSON 字符串**承载（`ChatService#sendDelta`），
+   空格由 JSON 转义，不再与分隔符混淆；前端 `App.jsx` 用 `JSON.parse` 取回，
+   解析失败时退回裸文本以兼容未升级的后端；`Markdown.jsx` 的标题正则也放宽到
+   `\s*` 做兜底。修复后 delta 拼接与定稿**逐字相同**。
+   守门脚本：`python scripts/probe_delta_vs_done_space.py`、`python scripts/verify_markdown_fixed.py`。
 
 7. **`top_k ≥ 33` 会静默返回空集**：HTTP 200、0 条记录、零异常。
    排查「突然全答不出」时先看这一项。
@@ -258,8 +304,10 @@ npm run dev        # http://localhost:5173，已配 /api 代理到 8080
 | Java 治理层 | ✅ 编译通过，14 项单测全绿 |
 | 治理层端到端验证 | ✅ 13/13 通过 |
 | 前端 | ✅ 构建通过（146 KB / gzip 48 KB） |
-| Dify 模型配置 + 知识库入库 + Chatflow | ✅ 已配好并跑通（**单知识库，含 3 份条款**） |
-| 评测集 + 闭环评测器 | ✅ **已跑 4 轮全量**，结果留档在 `eval/runs/` |
+| Dify 模型配置 + 知识库入库 + Chatflow | ✅ 已配好并跑通（**单知识库，当前实入 2 份**，第三份未入库） |
+| 评测集 + 闭环评测器 | ✅ **已跑 5 轮全量**，结果留档在 `eval/runs/` |
 | 检索参数调优（阈值 / top_k / 权重） | ✅ 已扫完并定档，**已到参数天花板** |
 | **产品路由（拆双知识库 + 问题分类器）** | ⏳ **待办** —— 当前串档类失败的唯一解 |
-| **清理知识库里的目录/封面页** | ⏳ **待办** —— 52 条里 30% 的查询被目录页抢占高分位 |
+| **清理知识库里的目录/封面页** | ✅ **已完成 r005** —— 目录页噪声 11/52 → **0/52**，⚠️ 但同轮出现检索分数整体退化，见 `docs/评测迭代报告.md` §9 |
+| **流式 delta 空格丢失** | ✅ **已修** —— delta 改走 JSON 承载，拼接结果与定稿逐字相同 |
+| **检索分数标定偏移** | ⏳ **待查** —— r005 实测 34/34 条首条分全部下降，是 r005 指标不可直接采信的原因 |
