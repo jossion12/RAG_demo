@@ -53,7 +53,10 @@ public class CitationAssembler {
                 r.segmentPosition,
                 extractPageNumber(r.content),
                 r.score,
-                clip(r.content));
+                clip(r.content),
+                // 完整原文：判定与审计用。注意是**未压缩空白**的原始 content，
+                // 不走 clip()——clip 会把换行压成空格再截断，判定层不需要这些副作用。
+                r.content);
     }
 
     /** 溯源粒度探测：正文里若带「第 N 页」则能给出页码，否则保持 null。 */

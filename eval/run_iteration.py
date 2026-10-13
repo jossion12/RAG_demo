@@ -13,6 +13,14 @@
     SSE 分帧 -> event:delta|citations|done|blocked|error
     data 多行以 \n 连接（与 frontend/src/App.jsx:53-55 同一套解析）
 
+⚠️ delta 必须 JSON.parse —— 2026-10-13 修正。
+    后端把 delta 改成 JSON 字符串承载（ChatService#sendDelta）之后，
+    本脚本曾一直按裸文本原样拼接。两者一度同源，但前端改了、评测没改，
+    于是同一份响应在页面上显示正常、在评测里却变成
+    "除""另""有""约""外" 这种逐字转义的文本（数字还被劈成 3" "0），
+    答案覆盖率全线归零、应答类命中率从 38% 掉到 7%。
+    **这类不同步不会报错，只会静默产出错误结论**，改任一侧都要同步另一侧。
+
 判分与失败归因：
     先判是否拦截/异常，再按期望类型分流。归因优先级从高到低：
         error            请求异常（HTTP/超时/解析失败）
@@ -122,7 +130,17 @@ def call_frontend_sse(base, question, timeout=300):
                 payload = "\n".join(data_lines)      # 前端 dataLines.join('\n')
                 events.append(event)
                 if event == "delta":
-                    answer_parts.append(payload)
+                    # 与 frontend/src/App.jsx:35-39 同一套解析：delta 的 payload
+                    # 是**JSON 字符串**（后端 ChatService#sendDelta 用 json(text)
+                    # 承载，避免 SSE 分隔空格吃掉以空格开头的帧）。
+                    # 直接原样拼接会得到 "除""另""有""约" 这种逐字被转义的文本
+                    # （数字还会被劈成 3" "0），答案本身就是坏的，覆盖率会全线归零。
+                    # 这里必须解出来；解析失败再退回裸文本，兼容未升级的后端。
+                    try:
+                        v = json.loads(payload)
+                        answer_parts.append(v if isinstance(v, str) else payload)
+                    except Exception:
+                        answer_parts.append(payload)
                 elif event == "citations":
                     try:
                         citations = json.loads(payload)
@@ -196,6 +214,14 @@ def cite_hit(citations, clause):
       False      -> 完全没召回
     title_only 在归因里单列为 clause_mismatch：它比 wrong_product 隐蔽，
     因为答案读起来完全合理，但引用兜不住用户问的那一份文档。
+
+    ⚠️ 2026-10-13 修正：优先用 `fullText`（未截断原文）判定。
+        治理层的 `snippet` 为展示截到 300 字，而条款片段中位 624 字、最长 1019 字，
+        **章节标题常落在 300 字之外**，用 snippet 判会把「明明召回到了」
+        判成 citation_miss / clause_mismatch——实测 34 条判定里 10 条受此影响，
+        导致引用命中率指标系统性偏低。
+        判据拿展示副本做判断，等于强迫它在残缺文本上工作。
+        历史轮次没有 fullText，退回 snippet 即可（旧数据的结论保持原样）。
     """
     if not clause:
         return None
@@ -203,7 +229,9 @@ def cite_hit(citations, clause):
     num, title = (m.group(1), m.group(2).strip()) if m else (None, clause.strip())
     title_only = False
     for c in citations or []:
-        blob = norm((c.get("label") or "") + (c.get("snippet") or ""))
+        # 完整原文优先；老数据没有这个字段时退回展示片段
+        body = c.get("fullText") or c.get("snippet") or ""
+        blob = norm((c.get("label") or "") + body)
         if norm(title) and norm(title) in blob:
             title_only = True
             if num and norm(num) in blob:
@@ -227,7 +255,10 @@ TOC_PAT = re.compile(r"阅\s*读\s*指\s*引|条\s*款\s*目\s*录")
 def toc_noise(citations, top=3):
     hits = 0
     for c in (citations or [])[:top]:
-        if TOC_PAT.search(re.sub(r"\s+", "", c.get("snippet") or "")):
+        # 与 cite_hit 同一口径：能用完整原文就别用展示片段，
+        # 免得两个指标读的不是同一份文本（判据之间本身也会打架）。
+        body = c.get("fullText") or c.get("snippet") or ""
+        if TOC_PAT.search(re.sub(r"\s+", "", body)):
             hits += 1
     return hits
 

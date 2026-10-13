@@ -12,6 +12,7 @@ target/
 *.jar
 *.war
 .mvn/timing.properties
+*.gz
 
 # ---------- Node / Vite ----------
 node_modules/
